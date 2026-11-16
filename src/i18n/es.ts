@@ -202,7 +202,7 @@ export const es: Translations = {
         description:
           "Ingeniero electrónico con experiencia en automatización industrial, validación en campo y desarrollo de software. Ha trabajado en Europa inspeccionando motores de combustión, diseñando herramientas internas en Python y programando PLCs y microcontroladores. Combina mecánica, electrónica y software para construir soluciones técnicas robustas.",
         specialties: ["Automatización", "Embedded", "Python", "E-Plan", "TIA Portal"],
-        image: "/team/jose-dark.jpg",
+        image: "/team/federico.jpg",
         linkedin: "https://www.linkedin.com/in/jvbosch/",
       },
       {
@@ -212,7 +212,7 @@ export const es: Translations = {
         description:
           "Desarrollador Full Stack Semi-Senior especializado en .NET, C# y Microsoft Azure. Trabaja en Accenture diseñando y manteniendo aplicaciones empresariales, APIs, bases de datos e infraestructura cloud, con foco en arquitectura limpia y soluciones escalables.",
         specialties: ["Backend", ".NET", "Azure", "Arquitectura", "APIs"],
-        image: "/team/federico.jpg",
+        image: "/team/jose-dark.jpg",
         linkedin: "https://www.linkedin.com/in/federico-fantacone/",
       },
     ],
