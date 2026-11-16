@@ -202,7 +202,7 @@ export const en: Translations = {
         description:
           "Electronics engineer with experience in industrial automation, field validation and software development. He has worked across Europe inspecting combustion engines, designing internal Python tools and programming PLCs and microcontrollers. He bridges mechanics, electronics and software to build robust technical solutions.",
         specialties: ["Automation", "Embedded", "Python", "E-Plan", "TIA Portal"],
-        image: "/team/jose.png",
+        image: "/team/jose-dark.jpg",
         linkedin: "https://www.linkedin.com/in/jvbosch/",
       },
       {

@@ -4,3 +4,10 @@ dist-ssr
 *.local
 .DS_Store
 npm-debug.log*
+
+# Local Netlify folder
+.netlify
+
+.agents/
+opencode.jsonc
+

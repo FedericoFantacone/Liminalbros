@@ -32,7 +32,7 @@ export function Hero() {
             <span className="eyebrow text-white/65">{t.hero.eyebrow}</span>
           </div>
           <div className="hidden items-center gap-4 sm:flex">
-            <span className="eyebrow">Austria</span>
+            <span className="eyebrow">Austria · Buenos Aires</span>
             <span className="h-px w-5 bg-white/20" />
             <span className="eyebrow">Worldwide</span>
           </div>

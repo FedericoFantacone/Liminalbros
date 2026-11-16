@@ -202,7 +202,7 @@ export const de: Translations = {
         description:
           "Elektronikingenieur mit Erfahrung in industrieller Automatisierung, Feldvalidierung und Softwareentwicklung. Er hat in Europa Verbrennungsmotoren inspiziert, interne Python-Werkzeuge entwickelt und PLCs sowie Mikrocontroller programmiert. Er verbindet Mechanik, Elektronik und Software zu robusten technischen Lösungen.",
         specialties: ["Automatisierung", "Embedded", "Python", "E-Plan", "TIA Portal"],
-        image: "/team/jose.png",
+        image: "/team/jose-dark.jpg",
         linkedin: "https://www.linkedin.com/in/jvbosch/",
       },
       {
