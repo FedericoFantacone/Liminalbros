@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="a-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f7fc"/>
+      <stop offset="1" stop-color="#eeecf8"/>
+    </linearGradient>
+    <linearGradient id="a-side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a192d"/>
+      <stop offset="1" stop-color="#121120"/>
+    </linearGradient>
+    <linearGradient id="a-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8d71ff"/>
+      <stop offset="1" stop-color="#6745f4"/>
+    </linearGradient>
+    <linearGradient id="a-card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#faf9ff"/>
+    </linearGradient>
+    <filter id="a-shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4e3a9e" flood-opacity=".08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#a-bg)"/>
+  <circle cx="1100" cy="80" r="260" fill="#8d71ff" fill-opacity=".045"/>
+  <circle cx="640" cy="750" r="220" fill="#4ad4b0" fill-opacity=".04"/>
+
+  <rect x="0" y="0" width="224" height="800" fill="url(#a-side)"/>
+  <g transform="translate(30 28)">
+    <rect width="28" height="28" rx="8" fill="url(#a-accent)"/>
+    <path d="M8 20 18 8M11 8h7v7" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="39" y="19" fill="#ffffff" font-family="Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="-.4">atlas</text>
+  </g>
+  <rect x="20" y="88" width="184" height="42" rx="10" fill="#ffffff" fill-opacity=".07"/>
+  <rect x="33" y="99" width="10" height="10" rx="3" fill="#8d71ff"/>
+  <text x="53" y="108" fill="#ffffff" font-family="Arial, sans-serif" font-size="11">Overview</text>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#8d8aa5">
+    <text x="53" y="158">Projects</text>
+    <text x="53" y="195">Team</text>
+    <text x="53" y="232">Calendar</text>
+    <text x="53" y="269">Reports</text>
+  </g>
+  <g fill="none" stroke="#6f6c8b" stroke-width="1.2">
+    <rect x="35" y="148" width="10" height="10" rx="2"/>
+    <circle cx="40" cy="190" r="5"/>
+    <rect x="35" y="223" width="10" height="10" rx="2"/>
+    <path d="M35 260h10M40 255v10"/>
+  </g>
+  <text x="32" y="330" fill="#65627d" font-family="Arial, sans-serif" font-size="8" letter-spacing="1.8">WORKSPACES</text>
+  <g font-family="Arial, sans-serif" font-size="10" fill="#8d8aa5">
+    <circle cx="38" cy="357" r="4" fill="#4ad4b0"/>
+    <text x="52" y="361">Product</text>
+    <circle cx="38" cy="387" r="4" fill="#ff9d6c"/>
+    <text x="52" y="391">Marketing</text>
+    <circle cx="38" cy="417" r="4" fill="#8d71ff"/>
+    <text x="52" y="421">Operations</text>
+  </g>
+  <rect x="20" y="668" width="184" height="100" rx="12" fill="#ffffff" fill-opacity=".055"/>
+  <circle cx="42" cy="694" r="12" fill="#8d71ff" fill-opacity=".28"/>
+  <text x="62" y="691" fill="#dad8e6" font-family="Arial, sans-serif" font-size="10">Atlas Pro</text>
+  <text x="62" y="707" fill="#77748e" font-family="Arial, sans-serif" font-size="8">8 days left in trial</text>
+  <rect x="34" y="730" width="156" height="24" rx="12" fill="#8d71ff"/>
+  <text x="112" y="746" fill="#ffffff" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" font-weight="700">Upgrade plan</text>
+
+  <g>
+    <rect x="224" y="0" width="976" height="76" fill="#ffffff" fill-opacity=".68"/>
+    <path d="M224 76h976" stroke="#221f3d" stroke-opacity=".07"/>
+    <rect x="256" y="24" width="270" height="30" rx="15" fill="#f1eff8"/>
+    <circle cx="273" cy="39" r="5" fill="none" stroke="#8d8aa5"/>
+    <path d="m277 43 3 3" stroke="#8d8aa5"/>
+    <text x="288" y="43" fill="#9995ad" font-family="Arial, sans-serif" font-size="9">Search anything...</text>
+    <g>
+      <circle cx="1042" cy="38" r="14" fill="#d7cffc"/>
+      <text x="1042" y="42" fill="#5b3fd4" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" font-weight="700">AB</text>
+      <circle cx="1070" cy="38" r="14" fill="#b9ebdc"/>
+      <text x="1070" y="42" fill="#1b8066" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" font-weight="700">ML</text>
+      <circle cx="1098" cy="38" r="14" fill="#ffdac4"/>
+      <text x="1098" y="42" fill="#a45023" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" font-weight="700">JR</text>
+      <circle cx="1138" cy="38" r="15" fill="url(#a-accent)"/>
+      <path d="M1133 38h10M1138 33v10" stroke="#ffffff" stroke-width="1.2"/>
+    </g>
+  </g>
+
+  <text x="256" y="126" fill="#706b88" font-family="Arial, sans-serif" font-size="10">Lunes, 12 de octubre</text>
+  <text x="256" y="160" fill="#201d34" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="-1">Buenos días, equipo</text>
+  <text x="256" y="180" fill="#8b87a0" font-family="Arial, sans-serif" font-size="10">Esto es lo que está pasando en Atlas hoy.</text>
+  <rect x="1016" y="134" width="160" height="38" rx="10" fill="url(#a-accent)"/>
+  <text x="1036" y="157" fill="#ffffff" font-family="Arial, sans-serif" font-size="10" font-weight="700">+ Nuevo proyecto</text>
+
+  <g filter="url(#a-shadow)">
+    <rect x="256" y="210" width="276" height="112" rx="14" fill="url(#a-card)" stroke="#2c2650" stroke-opacity=".06"/>
+    <rect x="274" y="228" width="32" height="32" rx="9" fill="#8d71ff" fill-opacity=".1"/>
+    <path d="M284 250v-10h5l7 5-7 5h-5Z" fill="#7c5cf5"/>
+    <text x="316" y="240" fill="#8b87a0" font-family="Arial, sans-serif" font-size="9">Proyectos activos</text>
+    <text x="274" y="296" fill="#201d34" font-family="Arial, sans-serif" font-size="28" font-weight="700">24</text>
+    <text x="316" y="296" fill="#3dbd98" font-family="Arial, sans-serif" font-size="8">↑ 12%</text>
+    <path d="M464 292l10-11 9 5 12-16 10 7" fill="none" stroke="#8d71ff" stroke-width="1.5"/>
+  </g>
+  <g filter="url(#a-shadow)">
+    <rect x="548" y="210" width="276" height="112" rx="14" fill="url(#a-card)" stroke="#2c2650" stroke-opacity=".06"/>
+    <rect x="566" y="228" width="32" height="32" rx="9" fill="#4ad4b0" fill-opacity=".12"/>
+    <circle cx="582" cy="242" r="5" fill="none" stroke="#2eae8c" stroke-width="1.5"/>
+    <path d="M574 252c2-5 14-5 16 0" fill="none" stroke="#2eae8c" stroke-width="1.5"/>
+    <text x="608" y="240" fill="#8b87a0" font-family="Arial, sans-serif" font-size="9">Miembros del equipo</text>
+    <text x="566" y="296" fill="#201d34" font-family="Arial, sans-serif" font-size="28" font-weight="700">18</text>
+    <text x="608" y="296" fill="#3dbd98" font-family="Arial, sans-serif" font-size="8">+ 2 este mes</text>
+    <g>
+      <circle cx="748" cy="284" r="8" fill="#d7cffc"/>
+      <circle cx="762" cy="284" r="8" fill="#b9ebdc"/>
+      <circle cx="776" cy="284" r="8" fill="#ffdac4"/>
+      <circle cx="790" cy="284" r="8" fill="#8d71ff"/>
+      <text x="790" y="287" fill="#ffffff" font-family="Arial, sans-serif" font-size="6" text-anchor="middle">+12</text>
+    </g>
+  </g>
+  <g filter="url(#a-shadow)">
+    <rect x="840" y="210" width="336" height="112" rx="14" fill="url(#a-card)" stroke="#2c2650" stroke-opacity=".06"/>
+    <rect x="858" y="228" width="32" height="32" rx="9" fill="#ff9d6c" fill-opacity=".13"/>
+    <path d="M874 238v12M868 244h12" stroke="#dd733c" stroke-width="1.5"/>
+    <text x="900" y="240" fill="#8b87a0" font-family="Arial, sans-serif" font-size="9">Tareas completadas</text>
+    <text x="858" y="296" fill="#201d34" font-family="Arial, sans-serif" font-size="28" font-weight="700">86%</text>
+    <rect x="930" y="280" width="220" height="7" rx="3.5" fill="#f0edf9"/>
+    <rect x="930" y="280" width="189" height="7" rx="3.5" fill="#ff9d6c"/>
+    <text x="858" y="310" fill="#a29eb5" font-family="Arial, sans-serif" font-size="8">+ 14 vs la semana pasada</text>
+  </g>
+
+  <text x="256" y="368" fill="#201d34" font-family="Arial, sans-serif" font-size="14" font-weight="700">Sprint actual</text>
+  <text x="354" y="367" fill="#8b87a0" font-family="Arial, sans-serif" font-size="9">12 — 26 oct</text>
+  <g font-family="Arial, sans-serif" font-size="9" fill="#8b87a0">
+    <circle cx="1030" cy="364" r="4" fill="#8d71ff"/>
+    <text x="1040" y="367">Board</text>
+    <text x="1084" y="367">Timeline</text>
+    <rect x="1132" y="352" width="44" height="22" rx="11" fill="#f0edf9"/>
+    <text x="1146" y="366" fill="#706b88" font-size="8">•••</text>
+  </g>
+
+  <g filter="url(#a-shadow)">
+    <rect x="256" y="390" width="286" height="372" rx="14" fill="#f5f3fb"/>
+    <rect x="272" y="406" width="254" height="34" rx="8" fill="#ffffff"/>
+    <circle cx="286" cy="423" r="4" fill="#8d71ff"/>
+    <text x="298" y="426" fill="#4e4966" font-family="Arial, sans-serif" font-size="9" font-weight="700">POR HACER</text>
+    <rect x="448" y="411" width="18" height="18" rx="9" fill="#ece8f8"/>
+    <text x="457" y="424" fill="#736d8a" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">5</text>
+
+    <g>
+      <rect x="272" y="456" width="254" height="88" rx="10" fill="#ffffff"/>
+      <rect x="286" y="470" width="44" height="16" rx="8" fill="#ede8ff"/>
+      <text x="294" y="481" fill="#6c4fe8" font-family="Arial, sans-serif" font-size="7" font-weight="700">DESIGN</text>
+      <text x="286" y="502" fill="#2c2843" font-family="Arial, sans-serif" font-size="10" font-weight="700">Mobile onboarding</text>
+      <text x="286" y="518" fill="#9893aa" font-family="Arial, sans-serif" font-size="8">Refine the first-run experience</text>
+      <circle cx="490" cy="480" r="8" fill="#d7cffc"/>
+      <path d="M476 534h80" stroke="#edeadf" stroke-width="2"/>
+      <text x="286" y="533" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">3 subtasks</text>
+    </g>
+    <g>
+      <rect x="272" y="556" width="254" height="88" rx="10" fill="#ffffff"/>
+      <rect x="286" y="570" width="52" height="16" rx="8" fill="#e6f7f1"/>
+      <text x="294" y="581" fill="#279b7a" font-family="Arial, sans-serif" font-size="7" font-weight="700">RESEARCH</text>
+      <text x="286" y="602" fill="#2c2843" font-family="Arial, sans-serif" font-size="10" font-weight="700">User interviews</text>
+      <text x="286" y="618" fill="#9893aa" font-family="Arial, sans-serif" font-size="8">Synthesize Q4 findings</text>
+      <circle cx="490" cy="580" r="8" fill="#b9ebdc"/>
+    </g>
+    <g>
+      <rect x="272" y="656" width="254" height="88" rx="10" fill="#ffffff"/>
+      <rect x="286" y="670" width="38" height="16" rx="8" fill="#fff0e7"/>
+      <text x="294" y="681" fill="#cd6b35" font-family="Arial, sans-serif" font-size="7" font-weight="700">WEB</text>
+      <text x="286" y="702" fill="#2c2843" font-family="Arial, sans-serif" font-size="10" font-weight="700">Billing page v2</text>
+      <text x="286" y="718" fill="#9893aa" font-family="Arial, sans-serif" font-size="8">Update plan comparison</text>
+      <circle cx="490" cy="680" r="8" fill="#ffdac4"/>
+    </g>
+  </g>
+
+  <g filter="url(#a-shadow)">
+    <rect x="558" y="390" width="286" height="372" rx="14" fill="#f5f3fb"/>
+    <rect x="574" y="406" width="254" height="34" rx="8" fill="#ffffff"/>
+    <circle cx="588" cy="423" r="4" fill="#ff9d6c"/>
+    <text x="600" y="426" fill="#4e4966" font-family="Arial, sans-serif" font-size="9" font-weight="700">EN PROGRESO</text>
+    <rect x="750" y="411" width="18" height="18" rx="9" fill="#ece8f8"/>
+    <text x="759" y="424" fill="#736d8a" font-family="Arial, sans-serif" font-size="8" text-anchor="middle">3</text>
+
+    <g>
+      <rect x="574" y="456" width="254" height="108" rx="10" fill="#ffffff"/>
+      <rect x="588" y="470" width="42" height="16" rx="8" fill="#ede8ff"/>
+      <text x="596" y="481" fill="#6c4fe8" font-family="Arial, sans-serif" font-size="7" font-weight="700">PRODUCT</text>
+      <text x="588" y="502" fill="#2c2843" font-family="Arial, sans-serif" font-size="10" font-weight="700">Analytics dashboard</text>
+      <text x="588" y="518" fill="#9893aa" font-family="Arial, sans-serif" font-size="8">Build the reporting module</text>
+      <rect x="588" y="530" width="184" height="5" rx="2.5" fill="#efecf8"/>
+      <rect x="588" y="530" width="132" height="5" rx="2.5" fill="#8d71ff"/>
+      <text x="588" y="549" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">72% complete</text>
+      <circle cx="792" cy="480" r="8" fill="#d7cffc"/>
+    </g>
+    <g>
+      <rect x="574" y="576" width="254" height="88" rx="10" fill="#ffffff"/>
+      <rect x="588" y="590" width="54" height="16" rx="8" fill="#e6f7f1"/>
+      <text x="596" y="601" fill="#279b7a" font-family="Arial, sans-serif" font-size="7" font-weight="700">MARKETING</text>
+      <text x="588" y="622" fill="#2c2843" font-family="Arial, sans-serif" font-size="10" font-weight="700">Launch campaign</text>
+      <text x="588" y="638" fill="#9893aa" font-family="Arial, sans-serif" font-size="8">Prepare landing page assets</text>
+      <circle cx="792" cy="600" r="8" fill="#ffdac4"/>
+    </g>
+    <g>
+      <rect x="574" y="676" width="254" height="68" rx="10" fill="#ffffff" fill-opacity=".66" stroke="#8d71ff" stroke-opacity=".25" stroke-dasharray="4 4"/>
+      <path d="M690 710h10M695 705v10" stroke="#8d71ff" stroke-opacity=".7"/>
+    </g>
+  </g>
+
+  <g filter="url(#a-shadow)">
+    <rect x="862" y="390" width="314" height="152" rx="14" fill="url(#a-card)" stroke="#2c2650" stroke-opacity=".06"/>
+    <text x="880" y="420" fill="#201d34" font-family="Arial, sans-serif" font-size="11" font-weight="700">Actividad del equipo</text>
+    <g>
+      <circle cx="890" cy="450" r="8" fill="#d7cffc"/>
+      <text x="906" y="448" fill="#4e4966" font-family="Arial, sans-serif" font-size="8">AB completó “Design tokens”</text>
+      <text x="906" y="461" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">Hace 12 min</text>
+      <circle cx="890" cy="484" r="8" fill="#b9ebdc"/>
+      <text x="906" y="482" fill="#4e4966" font-family="Arial, sans-serif" font-size="8">ML comentó en “Billing page”</text>
+      <text x="906" y="495" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">Hace 34 min</text>
+      <circle cx="890" cy="518" r="8" fill="#ffdac4"/>
+      <text x="906" y="516" fill="#4e4966" font-family="Arial, sans-serif" font-size="8">JR movió 2 tareas a Done</text>
+      <text x="906" y="529" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">Hace 1 h</text>
+    </g>
+  </g>
+
+  <g filter="url(#a-shadow)">
+    <rect x="862" y="558" width="314" height="204" rx="14" fill="url(#a-card)" stroke="#2c2650" stroke-opacity=".06"/>
+    <text x="880" y="586" fill="#201d34" font-family="Arial, sans-serif" font-size="11" font-weight="700">Velocity</text>
+    <text x="880" y="602" fill="#a29eb5" font-family="Arial, sans-serif" font-size="8">Story points per sprint</text>
+    <g fill="#8d71ff">
+      <rect x="886" y="654" width="18" height="60" rx="4" fill-opacity=".18"/>
+      <rect x="916" y="638" width="18" height="76" rx="4" fill-opacity=".3"/>
+      <rect x="946" y="646" width="18" height="68" rx="4" fill-opacity=".24"/>
+      <rect x="976" y="620" width="18" height="94" rx="4" fill-opacity=".5"/>
+      <rect x="1006" y="626" width="18" height="88" rx="4" fill-opacity=".4"/>
+      <rect x="1036" y="604" width="18" height="110" rx="4" fill-opacity=".7"/>
+      <rect x="1066" y="594" width="18" height="120" rx="4"/>
+      <rect x="1096" y="612" width="18" height="102" rx="4" fill-opacity=".55"/>
+      <rect x="1126" y="584" width="18" height="130" rx="4" fill-opacity=".85"/>
+    </g>
+    <path d="M880 738h276" stroke="#221f3d" stroke-opacity=".08"/>
+    <text x="880" y="750" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7">Sprint 18</text>
+    <text x="1156" y="750" fill="#a29eb5" font-family="Arial, sans-serif" font-size="7" text-anchor="end">Sprint 26</text>
+  </g>
+</svg>

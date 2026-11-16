@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="n-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f0d"/>
+      <stop offset="1" stop-color="#0d1210"/>
+    </linearGradient>
+    <linearGradient id="n-area" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7ff4f" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#d7ff4f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="n-line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9bbc25"/>
+      <stop offset="1" stop-color="#d7ff4f"/>
+    </linearGradient>
+    <radialGradient id="n-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d7ff4f" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#d7ff4f" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="n-blur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#n-bg)"/>
+  <circle cx="960" cy="120" r="240" fill="url(#n-glow)"/>
+  <g opacity=".15" stroke="#ffffff" stroke-width="1">
+    <path d="M0 100h1200M0 200h1200M0 300h1200M0 400h1200M0 500h1200M0 600h1200M0 700h1200"/>
+    <path d="M100 0v800M200 0v800M300 0v800M400 0v800M500 0v800M600 0v800M700 0v800M800 0v800M900 0v800M1000 0v800M1100 0v800"/>
+  </g>
+
+  <rect width="1200" height="68" fill="#0b0f0d" fill-opacity=".9"/>
+  <path d="M0 68h1200" stroke="#ffffff" stroke-opacity=".08"/>
+  <g transform="translate(32 24)">
+    <rect width="22" height="22" rx="6" fill="#d7ff4f"/>
+    <path d="M7 6h4l4 5-4 5H7V6Z" fill="#0b0f0d"/>
+    <text x="34" y="16" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="-.5">northline</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="12" fill="#8b938d">
+    <text x="286" y="41">Overview</text>
+    <text x="372" y="41">Reports</text>
+    <text x="446" y="41">Audiences</text>
+    <text x="538" y="41">Settings</text>
+  </g>
+  <rect x="284" y="30" width="68" height="26" rx="13" fill="#d7ff4f" fill-opacity=".09"/>
+  <text x="300" y="47" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="10" font-weight="700">LIVE</text>
+  <circle cx="1062" cy="34" r="16" fill="#1b211d"/>
+  <circle cx="1062" cy="34" r="7" fill="#d7ff4f" fill-opacity=".7"/>
+  <rect x="1088" y="22" width="80" height="25" rx="12.5" fill="#ffffff" fill-opacity=".07"/>
+  <text x="1104" y="38" fill="#d6dbd5" font-family="Arial, sans-serif" font-size="10">7 days</text>
+
+  <rect x="0" y="68" width="208" height="732" fill="#0a0d0b"/>
+  <path d="M208 68v732" stroke="#ffffff" stroke-opacity=".07"/>
+  <text x="30" y="110" fill="#5d665f" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.8">WORKSPACE</text>
+  <rect x="20" y="128" width="168" height="38" rx="8" fill="#d7ff4f" fill-opacity=".08"/>
+  <rect x="32" y="136" width="10" height="10" rx="2" fill="#d7ff4f"/>
+  <text x="52" y="147" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="11">Dashboard</text>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#788079">
+    <circle cx="37" cy="190" r="4" fill="#535b54"/>
+    <text x="52" y="194">Analytics</text>
+    <circle cx="37" cy="226" r="4" fill="#535b54"/>
+    <text x="52" y="230">Customers</text>
+    <circle cx="37" cy="262" r="4" fill="#535b54"/>
+    <text x="52" y="266">Products</text>
+    <circle cx="37" cy="298" r="4" fill="#535b54"/>
+    <text x="52" y="302">Integrations</text>
+  </g>
+  <text x="30" y="356" fill="#5d665f" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.8">PROJECTS</text>
+  <g font-family="Arial, sans-serif" font-size="11" fill="#788079">
+    <circle cx="37" cy="380" r="4" fill="#d7ff4f" fill-opacity=".55"/>
+    <text x="52" y="384">Q3 Forecast</text>
+    <circle cx="37" cy="410" r="4" fill="#6a5cff" fill-opacity=".75"/>
+    <text x="52" y="414">Retention</text>
+    <circle cx="37" cy="440" r="4" fill="#ff9c6a" fill-opacity=".75"/>
+    <text x="52" y="444">Expansion</text>
+  </g>
+  <rect x="20" y="692" width="168" height="62" rx="10" fill="#ffffff" fill-opacity=".035"/>
+  <circle cx="40" cy="718" r="10" fill="#d7ff4f" fill-opacity=".18"/>
+  <text x="60" y="715" fill="#c9cec8" font-family="Arial, sans-serif" font-size="10">Pro plan</text>
+  <text x="60" y="731" fill="#6d756e" font-family="Arial, sans-serif" font-size="9">24 days remaining</text>
+
+  <text x="248" y="124" fill="#6e776f" font-family="Arial, sans-serif" font-size="11">Monday, October 12</text>
+  <text x="248" y="158" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="29" font-weight="700" letter-spacing="-1">Overview</text>
+  <rect x="1004" y="130" width="140" height="38" rx="10" fill="#141915" stroke="#ffffff" stroke-opacity=".08"/>
+  <text x="1020" y="153" fill="#b7beb7" font-family="Arial, sans-serif" font-size="10">Export report</text>
+  <rect x="248" y="184" width="120" height="30" rx="15" fill="#d7ff4f"/>
+  <text x="272" y="203" fill="#0b0f0d" font-family="Arial, sans-serif" font-size="10" font-weight="700">+ New report</text>
+
+  <g>
+    <rect x="248" y="238" width="294" height="112" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="268" y="266" fill="#7b847c" font-family="Arial, sans-serif" font-size="10">Total revenue</text>
+    <text x="268" y="306" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="29" font-weight="700">$248.5k</text>
+    <text x="268" y="328" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="9">+18.2%</text>
+    <text x="314" y="328" fill="#606961" font-family="Arial, sans-serif" font-size="9">vs last month</text>
+    <path d="M420 314l16-18 13 8 18-27 16 9 20-19" fill="none" stroke="#d7ff4f" stroke-opacity=".7" stroke-width="1.5"/>
+  </g>
+  <g>
+    <rect x="558" y="238" width="294" height="112" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="578" y="266" fill="#7b847c" font-family="Arial, sans-serif" font-size="10">Active users</text>
+    <text x="578" y="306" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="29" font-weight="700">12,841</text>
+    <text x="578" y="328" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="9">+9.4%</text>
+    <text x="618" y="328" fill="#606961" font-family="Arial, sans-serif" font-size="9">vs last month</text>
+    <g fill="#d7ff4f" fill-opacity=".38">
+      <rect x="750" y="310" width="6" height="12" rx="2"/>
+      <rect x="762" y="302" width="6" height="20" rx="2"/>
+      <rect x="774" y="294" width="6" height="28" rx="2"/>
+      <rect x="786" y="304" width="6" height="18" rx="2"/>
+      <rect x="798" y="284" width="6" height="38" rx="2"/>
+      <rect x="810" y="296" width="6" height="26" rx="2"/>
+      <rect x="822" y="288" width="6" height="34" rx="2"/>
+    </g>
+  </g>
+  <g>
+    <rect x="868" y="238" width="294" height="112" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+    <text x="888" y="266" fill="#7b847c" font-family="Arial, sans-serif" font-size="10">Conversion</text>
+    <text x="888" y="306" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="29" font-weight="700">7.84%</text>
+    <text x="888" y="328" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="9">+2.1%</text>
+    <text x="924" y="328" fill="#606961" font-family="Arial, sans-serif" font-size="9">vs last month</text>
+    <circle cx="1096" cy="294" r="28" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="6"/>
+    <circle cx="1096" cy="294" r="28" fill="none" stroke="#d7ff4f" stroke-width="6" stroke-linecap="round" stroke-dasharray="106 70" transform="rotate(-90 1096 294)"/>
+  </g>
+
+  <rect x="248" y="374" width="604" height="234" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+  <text x="270" y="404" fill="#e2e6df" font-family="Arial, sans-serif" font-size="12" font-weight="700">Revenue overview</text>
+  <rect x="718" y="386" width="112" height="26" rx="13" fill="#ffffff" fill-opacity=".045"/>
+  <text x="734" y="403" fill="#8b938d" font-family="Arial, sans-serif" font-size="9">Last 30 days</text>
+  <g stroke="#ffffff" stroke-opacity=".055">
+    <path d="M276 448h550M276 492h550M276 536h550M276 580h550"/>
+  </g>
+  <g fill="#5e665f" font-family="Arial, sans-serif" font-size="8">
+    <text x="248" y="451">80k</text>
+    <text x="248" y="495">60k</text>
+    <text x="248" y="539">40k</text>
+    <text x="248" y="583">20k</text>
+    <text x="276" y="598">01</text>
+    <text x="376" y="598">07</text>
+    <text x="476" y="598">14</text>
+    <text x="576" y="598">21</text>
+    <text x="676" y="598">28</text>
+    <text x="786" y="598">31</text>
+  </g>
+  <path d="M276 562C306 552 326 528 356 538C386 548 404 512 438 520C472 528 488 486 524 496C560 506 574 470 610 478C646 486 664 446 700 456C736 466 752 430 786 438L826 428L826 588H276Z" fill="url(#n-area)"/>
+  <path d="M276 562C306 552 326 528 356 538C386 548 404 512 438 520C472 528 488 486 524 496C560 506 574 470 610 478C646 486 664 446 700 456C736 466 752 430 786 438L826 428" fill="none" stroke="url(#n-line)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="700" cy="456" r="4" fill="#d7ff4f"/>
+  <circle cx="700" cy="456" r="9" fill="none" stroke="#d7ff4f" stroke-opacity=".2"/>
+
+  <rect x="868" y="374" width="294" height="234" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+  <text x="888" y="404" fill="#e2e6df" font-family="Arial, sans-serif" font-size="12" font-weight="700">Acquisition</text>
+  <circle cx="956" cy="488" r="48" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="16"/>
+  <circle cx="956" cy="488" r="48" fill="none" stroke="#d7ff4f" stroke-width="16" stroke-dasharray="152 150" stroke-linecap="round" transform="rotate(-90 956 488)"/>
+  <circle cx="956" cy="488" r="48" fill="none" stroke="#6f61ff" stroke-width="16" stroke-dasharray="72 230" stroke-dashoffset="-158" stroke-linecap="round" transform="rotate(-90 956 488)"/>
+  <text x="956" y="484" fill="#f1f2ec" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">64%</text>
+  <text x="956" y="499" fill="#6e776f" font-family="Arial, sans-serif" font-size="7" text-anchor="middle">organic</text>
+  <g font-family="Arial, sans-serif" font-size="9">
+    <circle cx="1032" cy="462" r="3" fill="#d7ff4f"/>
+    <text x="1042" y="465" fill="#8b938d">Organic</text>
+    <circle cx="1032" cy="486" r="3" fill="#6f61ff"/>
+    <text x="1042" y="489" fill="#8b938d">Paid</text>
+    <circle cx="1032" cy="510" r="3" fill="#3e4540"/>
+    <text x="1042" y="513" fill="#8b938d">Referral</text>
+  </g>
+
+  <rect x="248" y="632" width="604" height="136" rx="14" fill="#111613" stroke="#ffffff" stroke-opacity=".075"/>
+  <text x="268" y="660" fill="#e2e6df" font-family="Arial, sans-serif" font-size="11" font-weight="700">Recent activity</text>
+  <path d="M268 680h564" stroke="#ffffff" stroke-opacity=".06"/>
+  <g font-family="Arial, sans-serif" font-size="9" fill="#8b938d">
+    <text x="268" y="704">Report generated</text>
+    <text x="268" y="726">New segment created</text>
+    <text x="268" y="748">Data sync completed</text>
+    <text x="728" y="704" text-anchor="end">2m ago</text>
+    <text x="728" y="726" text-anchor="end">18m ago</text>
+    <text x="728" y="748" text-anchor="end">1h ago</text>
+  </g>
+  <g fill="#d7ff4f">
+    <circle cx="690" cy="700" r="3" fill-opacity=".8"/>
+    <circle cx="706" cy="722" r="3" fill-opacity=".5"/>
+    <circle cx="674" cy="744" r="3" fill-opacity=".35"/>
+  </g>
+
+  <rect x="868" y="632" width="294" height="136" rx="14" fill="#101510" stroke="#d7ff4f" stroke-opacity=".16"/>
+  <text x="888" y="660" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.2">INSIGHT</text>
+  <text x="888" y="688" fill="#e9ede6" font-family="Arial, sans-serif" font-size="12" font-weight="700">Revenue is trending up</text>
+  <text x="888" y="708" fill="#7f8880" font-family="Arial, sans-serif" font-size="9">Users from organic search are</text>
+  <text x="888" y="723" fill="#7f8880" font-family="Arial, sans-serif" font-size="9">converting 2.4x better this week.</text>
+  <text x="888" y="748" fill="#d7ff4f" font-family="Arial, sans-serif" font-size="9">View insight →</text>
+</svg>

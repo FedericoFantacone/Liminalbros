@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="m-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f4efe5"/>
+      <stop offset="1" stop-color="#e9e1d2"/>
+    </linearGradient>
+    <linearGradient id="m-photo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#566044"/>
+      <stop offset=".55" stop-color="#30382a"/>
+      <stop offset="1" stop-color="#1d221a"/>
+    </linearGradient>
+    <radialGradient id="m-plate" cx="42%" cy="32%" r="68%">
+      <stop offset="0" stop-color="#f7f0df"/>
+      <stop offset=".72" stop-color="#e6dbc5"/>
+      <stop offset="1" stop-color="#c9bca2"/>
+    </radialGradient>
+    <radialGradient id="m-dish" cx="45%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#d88349"/>
+      <stop offset=".6" stop-color="#b9572e"/>
+      <stop offset="1" stop-color="#78331c"/>
+    </radialGradient>
+    <linearGradient id="m-leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c9f5a"/>
+      <stop offset="1" stop-color="#3f5128"/>
+    </linearGradient>
+    <filter id="m-grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <filter id="m-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#10140d" flood-opacity=".28"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#m-bg)"/>
+  <g opacity=".045" stroke="#30382a">
+    <path d="M0 100h1200M0 200h1200M0 300h1200M0 400h1200M0 500h1200M0 600h1200M0 700h1200"/>
+    <path d="M100 0v800M200 0v800M300 0v800M400 0v800M500 0v800M600 0v800M700 0v800M800 0v800M900 0v800M1000 0v800M1100 0v800"/>
+  </g>
+
+  <g>
+    <text x="48" y="78" fill="#242a20" font-family="Georgia, serif" font-size="40" font-weight="700" letter-spacing="-1.5">Mesa<tspan fill="#c35a2f">.</tspan></text>
+    <text x="158" y="74" fill="#7d7768" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.4">COCINA DE AUTOR</text>
+    <g font-family="Arial, sans-serif" font-size="11" fill="#535649">
+      <text x="680" y="74">Menú</text>
+      <text x="746" y="74">Nosotros</text>
+      <text x="834" y="74">Reservas</text>
+      <text x="916" y="74">Contacto</text>
+    </g>
+    <circle cx="1130" cy="60" r="9" fill="#242a20"/>
+    <text x="1150" y="64" fill="#454a3d" font-family="Arial, sans-serif" font-size="9" letter-spacing="1">ES</text>
+    <path d="M0 106h1200" stroke="#242a20" stroke-opacity=".14"/>
+  </g>
+
+  <g>
+    <text x="48" y="172" fill="#c35a2f" font-family="Arial, sans-serif" font-size="9" letter-spacing="2.6">TEMPORADA / VERANO</text>
+    <text x="44" y="262" fill="#242a20" font-family="Georgia, serif" font-size="76" letter-spacing="-2.8">El sabor de</text>
+    <text x="44" y="338" fill="#242a20" font-family="Georgia, serif" font-size="76" font-style="italic" letter-spacing="-2.8">la estación.</text>
+    <text x="48" y="392" fill="#6c6b5e" font-family="Arial, sans-serif" font-size="13">Una cocina honesta, ingredientes locales y</text>
+    <text x="48" y="412" fill="#6c6b5e" font-family="Arial, sans-serif" font-size="13">una mesa pensada para quedarse.</text>
+
+    <rect x="48" y="458" width="142" height="43" rx="21.5" fill="#242a20"/>
+    <text x="75" y="484" fill="#f4efe5" font-family="Arial, sans-serif" font-size="11" font-weight="700">Reservar mesa</text>
+    <text x="210" y="484" fill="#4e5145" font-family="Arial, sans-serif" font-size="10" letter-spacing=".6">Ver menú →</text>
+
+    <g>
+      <circle cx="61" cy="560" r="13" fill="none" stroke="#8a8a78"/>
+      <path d="M56 560h10M61 555v10" stroke="#5c5e50" stroke-width="1"/>
+      <text x="86" y="556" fill="#30352c" font-family="Arial, sans-serif" font-size="9" letter-spacing="1.6">RESERVAS ABIERTAS</text>
+      <text x="86" y="572" fill="#858474" font-family="Arial, sans-serif" font-size="9">Mar — Dom · 19 a 23 h</text>
+    </g>
+
+    <text x="44" y="674" fill="#9a9785" font-family="Arial, sans-serif" font-size="8" letter-spacing="2.2">01 — 04</text>
+    <path d="M47 694h126" stroke="#242a20" stroke-opacity=".25"/>
+    <path d="M47 694h92" stroke="#c35a2f" stroke-width="2"/>
+    <g fill="#8f8b7a" font-family="Arial, sans-serif" font-size="8" letter-spacing="1.5">
+      <text x="48" y="726">PLATOS DE AUTOR</text>
+      <text x="48" y="744">VINOS NATURALES</text>
+      <text x="48" y="762">PRODUCTO LOCAL</text>
+    </g>
+  </g>
+
+  <g filter="url(#m-shadow)">
+    <rect x="646" y="156" width="506" height="506" rx="253" fill="url(#m-photo)"/>
+    <g opacity=".4" stroke="#ffffff">
+      <circle cx="899" cy="409" r="210"/>
+      <circle cx="899" cy="409" r="180"/>
+    </g>
+    <text x="899" y="620" fill="#e8e4d4" fill-opacity=".62" font-family="Georgia, serif" font-size="14" font-style="italic" text-anchor="middle">tomate · durazno · albahaca</text>
+
+    <circle cx="899" cy="400" r="170" fill="url(#m-plate)"/>
+    <circle cx="899" cy="400" r="145" fill="none" stroke="#c8bba3" stroke-opacity=".55"/>
+    <circle cx="882" cy="392" r="96" fill="url(#m-dish)"/>
+    <circle cx="858" cy="367" r="68" fill="#c76636" fill-opacity=".55"/>
+    <path d="M824 426c40 16 90 12 122-16 12-10 18-23 20-36-33 20-74 29-116 22-16-3-29-8-41-15 0 19 6 35 15 45Z" fill="#8b421f" fill-opacity=".72"/>
+    <g fill="url(#m-leaf)">
+      <path d="M866 306c18-25 50-32 70-19-8 23-34 37-58 32-6-1-10-6-12-13Z"/>
+      <path d="M937 369c27-9 52 2 59 23-22 14-49 8-61-10-3-5-2-9 2-13Z"/>
+      <path d="M820 374c-20-17-18-44-3-58 20 12 27 37 17 54-3 6-8 7-14 4Z"/>
+      <path d="M873 449c6-26 30-44 52-40-1 25-20 48-43 50-6 0-9-4-9-10Z"/>
+    </g>
+    <g fill="#efdfae">
+      <circle cx="862" cy="334" r="4"/>
+      <circle cx="944" cy="408" r="3"/>
+      <circle cx="843" cy="430" r="3"/>
+      <circle cx="906" cy="326" r="2.5"/>
+      <circle cx="927" cy="447" r="3.5"/>
+    </g>
+    <path d="M862 407c20-16 49-17 68 0-10 22-54 28-68 0Z" fill="#f1d9ae" fill-opacity=".55"/>
+  </g>
+
+  <g>
+    <rect x="646" y="694" width="506" height="62" fill="#242a20"/>
+    <text x="670" y="721" fill="#f4efe5" font-family="Arial, sans-serif" font-size="8" letter-spacing="2">PRÓXIMA EXPERIENCIA</text>
+    <text x="670" y="741" fill="#d8d4c4" font-family="Georgia, serif" font-size="15" font-style="italic">Cena maridada · 24 de febrero</text>
+    <circle cx="1112" cy="725" r="19" fill="#c35a2f"/>
+    <path d="M1106 725h12m-5-5 5 5-5 5" stroke="#f4efe5" fill="none" stroke-width="1.2"/>
+  </g>
+
+  <g fill="#252a21" opacity=".55">
+    <text x="596" y="172" font-family="Arial, sans-serif" font-size="8" letter-spacing="2" transform="rotate(90 596 172)">MESA — BUENOS AIRES</text>
+  </g>
+
+  <rect width="1200" height="800" filter="url(#m-grain)" opacity=".35"/>
+</svg>
