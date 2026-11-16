@@ -34,8 +34,8 @@ export const site = {
   email: "hola@bros.studio",
   whatsapp: "5491100000000",
   whatsappDisplay: "+54 9 11 0000 0000",
-  linkedin: "https://www.linkedin.com/company/bros-studio",
-  location: "Buenos Aires, Argentina",
+  linkedin: "https://www.linkedin.com/in/federico-fantacone/",
+  location: "Austria · Argentina",
   availability: "Disponibles para nuevos proyectos",
   /**
    * Optional form endpoint (Formspree, Basin, etc.).

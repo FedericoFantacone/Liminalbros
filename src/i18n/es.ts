@@ -198,18 +198,22 @@ export const es: Translations = {
       {
         id: "01",
         name: "José Valentino Boschiazzo",
-        role: "Co-Fundador · Ingeniero Electrónico",
+        role: "Co-Fundador & CEO",
         description:
           "Ingeniero electrónico con experiencia en automatización industrial, validación en campo y desarrollo de software. Ha trabajado en Europa inspeccionando motores de combustión, diseñando herramientas internas en Python y programando PLCs y microcontroladores. Combina mecánica, electrónica y software para construir soluciones técnicas robustas.",
         specialties: ["Automatización", "Embedded", "Python", "E-Plan", "TIA Portal"],
+        image: "/team/jose.png",
+        linkedin: "https://www.linkedin.com/in/jvbosch/",
       },
       {
         id: "02",
         name: "Federico Fantacone",
-        role: "Co-Fundador · Full Stack Developer",
+        role: "Co-Fundador & CEO",
         description:
           "Desarrollador Full Stack Semi-Senior especializado en .NET, C# y Microsoft Azure. Trabaja en Accenture diseñando y manteniendo aplicaciones empresariales, APIs, bases de datos e infraestructura cloud, con foco en arquitectura limpia y soluciones escalables.",
         specialties: ["Backend", ".NET", "Azure", "Arquitectura", "APIs"],
+        image: "/team/federico.jpg",
+        linkedin: "https://www.linkedin.com/in/federico-fantacone/",
       },
     ],
     steps: [
@@ -227,9 +231,9 @@ export const es: Translations = {
       email: "Email",
       whatsapp: "WhatsApp",
       linkedin: "LinkedIn",
-      linkedinValue: "LIMINAL BROS / Software Studio",
+      linkedinValue: "Federico Fantacone",
     },
-    responseTime: "Buenos Aires · GMT-3 · Respuesta en 1–2 días hábiles",
+    responseTime: "Austria · GMT+1 / Argentina · GMT-3 · Respuesta en 1–2 días hábiles",
     briefTitle: "Brief inicial",
     briefSubtitle: "Contanos sobre tu proyecto",
     briefIndex: "/ 01",

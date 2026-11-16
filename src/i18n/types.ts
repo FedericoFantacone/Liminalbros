@@ -35,6 +35,7 @@ export interface ProfileItem {
   description: string;
   specialties: string[];
   image?: string;
+  linkedin?: string;
 }
 
 export interface StepItem {

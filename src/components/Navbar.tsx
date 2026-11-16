@@ -163,7 +163,7 @@ export function Navbar() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <LanguageSwitcher className="hidden sm:flex" />
+              <LanguageSwitcher className="flex" />
               <a
                 href="/#contacto"
                 className="group hidden items-center gap-2 rounded-full bg-bone px-5 py-2.5 text-[12px] font-medium text-ink transition-all duration-300 hover:bg-acid sm:inline-flex"

@@ -1,4 +1,4 @@
-import { ArrowUpRight, Check, Fingerprint, Users } from "lucide-react";
+import { ArrowUpRight, Check, Fingerprint, Linkedin, Users } from "lucide-react";
 import { useT } from "../i18n";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
@@ -35,21 +35,18 @@ export function About() {
               </p>
 
               <div className="mt-9 divide-y divide-white/[0.08] border-y border-white/[0.08]">
-                {t.about.approachItems.map((item) => (
-                  <div key={item.label} className="flex items-center justify-between py-4">
-                    <span className="flex items-center gap-2.5 text-[12px] text-muted">
-                      {item.label === "Equipo" || item.label === "Team" || item.label === "Team" ? (
-                        <Users size={13} strokeWidth={1.5} className="text-white/35" />
-                      ) : item.label === "Enfoque" || item.label === "Focus" || item.label === "Fokus" ? (
-                        <Fingerprint size={13} strokeWidth={1.5} className="text-white/35" />
-                      ) : (
-                        <Check size={13} strokeWidth={1.5} className="text-white/35" />
-                      )}
-                      {item.label}
-                    </span>
-                    <span className="text-[12px] text-white/65">{item.value}</span>
-                  </div>
-                ))}
+                {t.about.approachItems.map((item, index) => {
+                  const Icon = index === 0 ? Users : index === 1 ? Fingerprint : Check;
+                  return (
+                    <div key={item.label} className="flex items-center justify-between py-4">
+                      <span className="flex items-center gap-2.5 text-[12px] text-muted">
+                        <Icon size={13} strokeWidth={1.5} className="text-white/35" />
+                        {item.label}
+                      </span>
+                      <span className="text-[12px] text-white/65">{item.value}</span>
+                    </div>
+                  );
+                })}
               </div>
 
               <a
@@ -107,9 +104,17 @@ export function About() {
                       <span className="font-mono text-[9px] uppercase tracking-[0.16em] text-acid/80">
                         {profile.role}
                       </span>
-                      <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/20">
-                        Profile / {profile.id}
-                      </span>
+                      {profile.linkedin && (
+                        <a
+                          href={profile.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`${profile.name} en LinkedIn`}
+                          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 text-white/45 transition-all hover:border-acid/30 hover:text-acid"
+                        >
+                          <Linkedin size={13} strokeWidth={1.5} />
+                        </a>
+                      )}
                     </div>
 
                     <h3 className="mt-4 text-[clamp(1.6rem,3vw,2rem)] font-medium tracking-[-0.045em]">
