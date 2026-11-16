@@ -116,10 +116,20 @@ export function Contact() {
   const inputClass = (field: keyof FormValues) =>
     `field ${errors[field] ? "border-[#ff9d9d]/50 focus:border-[#ff9d9d]/70" : ""}`;
 
+  const linkedinChannels = t.about.items
+    .filter((profile) => profile.linkedin)
+    .map((profile) => ({
+      icon: Linkedin,
+      label: `${c.channels.linkedin} · ${profile.name.split(" ")[0]}`,
+      value: profile.name,
+      href: profile.linkedin as string,
+      external: true,
+    }));
+
   const channels = [
     { icon: Mail, label: c.channels.email, value: site.email, href: `mailto:${site.email}`, external: false },
     { icon: MessageCircle, label: c.channels.whatsapp, value: site.whatsappDisplay, href: `https://wa.me/${site.whatsapp}`, external: true },
-    { icon: Linkedin, label: c.channels.linkedin, value: c.channels.linkedinValue, href: site.linkedin, external: true },
+    ...linkedinChannels,
   ];
 
   return (

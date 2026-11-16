@@ -56,16 +56,21 @@ export function Footer() {
                 {site.email}
               </a>
               <span className="text-[13px] text-muted">{site.location}</span>
-              <div className="mt-2 flex items-center gap-2">
-                <a
-                  href={site.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LIMINAL BROS en LinkedIn"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-all hover:border-acid/30 hover:text-acid"
-                >
-                  <Linkedin size={14} strokeWidth={1.5} />
-                </a>
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                {t.about.items
+                  .filter((profile) => profile.linkedin)
+                  .map((profile) => (
+                    <a
+                      key={profile.id}
+                      href={profile.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${profile.name} en LinkedIn`}
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-all hover:border-acid/30 hover:text-acid"
+                    >
+                      <Linkedin size={14} strokeWidth={1.5} />
+                    </a>
+                  ))}
                 <a
                   href={`https://wa.me/${site.whatsapp}`}
                   target="_blank"
