@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="44%" r="72%">
+      <stop offset="0" stop-color="#191c1a"/>
+      <stop offset=".62" stop-color="#101312"/>
+      <stop offset="1" stop-color="#08090a"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope=".16"/></feComponentTransfer>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" filter="url(#grain)" opacity=".32" style="mix-blend-mode:overlay"/>
+
+  <g fill="none" stroke="#d7dbd6" stroke-opacity=".22" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 10">
+    <circle cx="512" cy="512" r="458"/>
+    <circle cx="512" cy="512" r="345"/>
+  </g>
+
+  <g stroke="#f4f4ee" stroke-width="9" stroke-linecap="square" fill="none">
+    <path d="M178 462H149V562H178"/>
+    <path d="M203 462H232V562H203"/>
+  </g>
+  <rect x="186" y="507" width="10" height="10" rx="1" fill="#f4f4ee"/>
+
+  <g font-family="Consolas, 'DejaVu Sans Mono', 'Courier New', monospace" font-size="80" font-weight="700" letter-spacing="1">
+    <text x="326" y="540" fill="#f4f4ee">LIMINAL</text>
+    <text x="658" y="540" fill="#e9be36">CODE.</text>
+  </g>
+</svg>

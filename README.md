@@ -34,7 +34,7 @@ npm run lint     # ESLint
 public/
   projects/              # capturas conceptuales de los proyectos (SVG)
   favicon.svg
-  og-code.svg
+  og-logo.svg           # imagen Open Graph cuadrada (1024x1024)
   robots.txt
   sitemap.xml
 src/
