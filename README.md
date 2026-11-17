@@ -1,6 +1,6 @@
-# BROS — Software Development Studio
+# LIMINAL CODE — Software Development Studio
 
-Landing page institucional para **BROS**, un estudio de desarrollo de software fundado por dos profesionales. Diseño editorial oscuro, acento lima eléctrico, animaciones sutiles y una sección de proyectos pensada como portfolio comercial.
+Landing page institucional para **LIMINAL CODE**, un estudio de desarrollo de software fundado por dos profesionales. Diseño editorial oscuro, acento lima eléctrico, animaciones sutiles y una sección de proyectos pensada como portfolio comercial.
 
 ## Stack
 
@@ -34,7 +34,7 @@ npm run lint     # ESLint
 public/
   projects/              # capturas conceptuales de los proyectos (SVG)
   favicon.svg
-  og-bros.svg
+  og-code.svg
   robots.txt
   sitemap.xml
 src/
@@ -66,10 +66,10 @@ Reemplazar los valores de `site`:
 
 ```ts
 export const site = {
-  email: "hola@bros.studio",
+  email: "hola@liminalcode.com",
   whatsapp: "5491100000000",        // formato internacional, sin + ni espacios
   whatsappDisplay: "+54 9 11 0000 0000",
-  linkedin: "https://www.linkedin.com/company/bros-studio",
+  linkedin: "https://www.linkedin.com/in/federico-fantacone/",
   location: "Buenos Aires, Argentina",
   formEndpoint: "",
 };
@@ -179,4 +179,4 @@ Configurar el dominio final y reemplazar todos los placeholders de contacto y pr
 
 ---
 
-**BROS — Building digital solutions.**
+**LIMINAL CODE — Building digital solutions.**

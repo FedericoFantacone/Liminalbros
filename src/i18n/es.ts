@@ -2,9 +2,9 @@ import type { Translations } from "./types";
 
 export const es: Translations = {
   meta: {
-    title: "LIMINAL BROS — Estudio de software y productos digitales",
+    title: "LIMINAL CODE — Estudio de software y productos digitales",
     description:
-      "LIMINAL BROS es un estudio de software que diseña y desarrolla productos digitales, aplicaciones web y sistemas a medida para negocios que quieren crecer.",
+      "LIMINAL CODE es un estudio de software que diseña y desarrolla productos digitales, aplicaciones web y sistemas a medida para negocios que quieren crecer.",
   },
   ui: {
     skipToContent: "Saltar al contenido",
@@ -95,7 +95,7 @@ export const es: Translations = {
     titleHighlight: "por nosotros.",
     subtitle: "Explorá algunos de nuestros desarrollos y soluciones digitales.",
     disclaimer:
-      "Cada proyecto abre una demo interactiva desarrollada por LIMINAL BROS: un concepto funcional de una sola vista. Todavía no son casos de clientes reales.",
+      "Cada proyecto abre una demo interactiva desarrollada por LIMINAL CODE: un concepto funcional de una sola vista.",
     count: "03 / Demo",
     demo: "Demo interactiva",
     view: "Ver proyecto",
@@ -283,7 +283,7 @@ export const es: Translations = {
     contactLabel: "Contacto",
     availability: "Disponibles para nuevos proyectos",
     copyright: "Todos los derechos reservados.",
-    final: "LIMINAL BROS — Building digital solutions.",
+    final: "LIMINAL CODE — Building digital solutions.",
     backToTop: "Volver arriba",
     cta: "¿Construimos algo?",
   },

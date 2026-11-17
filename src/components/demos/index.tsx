@@ -14,17 +14,17 @@ const AtlasDemo = lazy(() =>
 
 const DEMO_META: Record<string, { title: string; description: string }> = {
   northline: {
-    title: "Northline — interactive demo · LIMINAL BROS",
+    title: "Northline — interactive demo · LIMINAL CODE",
     description:
       "Interactive single-view demo of Northline: a modular analytics dashboard for teams that turn scattered data into clear decisions.",
   },
   mesa: {
-    title: "Mesa — interactive demo · LIMINAL BROS",
+    title: "Mesa — interactive demo · LIMINAL CODE",
     description:
       "Interactive single-view demo of Mesa: seasonal menu and table reservations for an author restaurant.",
   },
   atlas: {
-    title: "Atlas — interactive demo · LIMINAL BROS",
+    title: "Atlas — interactive demo · LIMINAL CODE",
     description:
       "Interactive single-view demo of Atlas: a Kanban board that centralises projects, teams and documentation.",
   },
@@ -34,9 +34,9 @@ export function ProjectDemo({ slug }: { slug: string }) {
   useEffect(() => {
     const meta = DEMO_META[slug];
     applyMeta({
-      title: meta?.title ?? "Interactive demo — LIMINAL BROS",
+      title: meta?.title ?? "Interactive demo — LIMINAL CODE",
       description:
-        meta?.description ?? "Interactive product demos designed and built by LIMINAL BROS.",
+        meta?.description ?? "Interactive product demos designed and built by LIMINAL CODE.",
       path: `/demo/${slug}`,
     });
   }, [slug]);
@@ -66,7 +66,7 @@ function DemoNotFound() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-ink px-6">
       <div className="max-w-md text-center">
-        <p className="eyebrow">LIMINAL BROS / 404</p>
+        <p className="eyebrow">LIMINAL CODE / 404</p>
         <h1 className="mt-4 text-[clamp(2rem,5vw,3rem)] font-medium tracking-[-0.05em]">
           {t.projectDetail.notFound}
         </h1>

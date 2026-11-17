@@ -90,7 +90,7 @@ export function About() {
                           </span>
                         </div>
                         <span className="absolute left-4 top-4 font-mono text-[8px] uppercase tracking-[0.18em] text-white/35">
-                          LIMINAL BROS / {profile.id}
+                          LIMINAL CODE / {profile.id}
                         </span>
                         <span className="absolute bottom-4 left-4 font-mono text-[8px] uppercase tracking-[0.14em] text-white/30">
                           Co-Founder

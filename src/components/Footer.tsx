@@ -17,7 +17,7 @@ export function Footer() {
       <div className="shell relative">
         <div className="grid gap-10 border-b border-white/[0.08] py-14 md:grid-cols-12 md:py-16">
           <div className="md:col-span-5">
-            <a href="/" aria-label="LIMINAL BROS — Ir al inicio" className="inline-block">
+            <a href="/" aria-label="LIMINAL CODE — Ir al inicio" className="inline-block">
               <Logo />
             </a>
             <p className="mt-5 max-w-xs text-[13px] leading-relaxed text-muted">
@@ -94,7 +94,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-3 py-6 text-[10px] text-white/55 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-mono tracking-[0.08em]">
-            © {year} LIMINAL BROS. {t.footer.copyright}
+            © {year} LIMINAL CODE. {t.footer.copyright}
           </p>
           <p className="font-mono tracking-[0.08em] text-white/55">
             {t.footer.final}

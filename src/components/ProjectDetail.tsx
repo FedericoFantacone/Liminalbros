@@ -13,7 +13,7 @@ export function ProjectDetail({ slug }: { slug: string }) {
   useEffect(() => {
     if (!project) return;
     applyMeta({
-      title: `${project.name} — LIMINAL BROS`,
+      title: `${project.name} — LIMINAL CODE`,
       description: project.description,
       path: `/proyectos/${project.id}`,
     });

@@ -138,7 +138,7 @@ export function Navbar() {
             <a
               href="/"
               className="relative z-10 text-bone transition-opacity hover:opacity-75"
-              aria-label="LIMINAL BROS — Ir al inicio"
+              aria-label="LIMINAL CODE — Ir al inicio"
             >
               <Logo />
             </a>

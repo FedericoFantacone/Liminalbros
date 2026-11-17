@@ -29,10 +29,10 @@ export type Profile = {
 };
 
 export const site = {
-  name: "BROS",
+  name: "LIMINAL CODE",
   url: "https://liminal-bros.netlify.app",
   tagline: "Building digital solutions.",
-  email: "hola@bros.studio",
+  email: "hola@liminalcode.com",
   whatsapp: "5491100000000",
   whatsappDisplay: "+54 9 11 0000 0000",
   linkedin: "https://www.linkedin.com/in/federico-fantacone/",

@@ -2,9 +2,9 @@ import type { Translations } from "./types";
 
 export const en: Translations = {
   meta: {
-    title: "LIMINAL BROS — Software studio and digital products",
+    title: "LIMINAL CODE — Software studio and digital products",
     description:
-      "LIMINAL BROS is a software studio that designs and builds digital products, web applications and custom systems for businesses that want to grow.",
+      "LIMINAL CODE is a software studio that designs and builds digital products, web applications and custom systems for businesses that want to grow.",
   },
   ui: {
     skipToContent: "Skip to content",
@@ -95,7 +95,7 @@ export const en: Translations = {
     titleHighlight: "for us.",
     subtitle: "Explore some of our developments and digital solutions.",
     disclaimer:
-      "Each project opens an interactive demo built by LIMINAL BROS: a working single-view concept. These are not real client cases yet.",
+      "Each project opens an interactive demo built by LIMINAL CODE: a working single-view concept.",
     count: "03 / Demo",
     demo: "Interactive demo",
     view: "View project",
@@ -283,7 +283,7 @@ export const en: Translations = {
     contactLabel: "Contact",
     availability: "Available for new projects",
     copyright: "All rights reserved.",
-    final: "LIMINAL BROS — Building digital solutions.",
+    final: "LIMINAL CODE — Building digital solutions.",
     backToTop: "Back to top",
     cta: "Shall we build something?",
   },

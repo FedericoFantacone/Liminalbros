@@ -8,7 +8,7 @@ export type { Locale, Translations } from "./types";
 
 const translations: Record<Locale, Translations> = { es, en, de };
 
-const STORAGE_KEY = "liminal-bros-locale";
+const STORAGE_KEY = "liminal-code-locale";
 
 interface LanguageContextValue {
   locale: Locale;

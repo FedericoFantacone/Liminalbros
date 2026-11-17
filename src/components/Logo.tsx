@@ -20,7 +20,7 @@ export function Logo({ className = "", showMark = true }: LogoProps) {
         </svg>
       )}
       <span className="text-[17px] font-semibold leading-none tracking-[-0.05em]">
-        LIMINAL <span className="text-acid">BROS.</span>
+        LIMINAL <span className="text-acid">CODE.</span>
       </span>
     </span>
   );

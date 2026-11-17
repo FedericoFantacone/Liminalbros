@@ -98,7 +98,7 @@ export function Hero() {
                     <span className="h-1.5 w-1.5 rounded-full bg-acid/70" />
                   </div>
                   <span className="font-mono text-[8px] uppercase tracking-[0.22em] text-white/35">
-                    LIMINAL BROS / SYSTEM_01
+                    LIMINAL CODE / SYSTEM_01
                   </span>
                   <span className="flex items-center gap-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-acid/80">
                     <span className="h-1 w-1 rounded-full bg-acid animate-pulse-dot" />
