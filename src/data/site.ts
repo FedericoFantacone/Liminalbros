@@ -30,7 +30,7 @@ export type Profile = {
 
 export const site = {
   name: "LIMINAL CODE",
-  url: "https://liminal-bros.netlify.app",
+  url: "https://liminalcode.netlify.app",
   tagline: "Building digital solutions.",
   email: "hola@liminalcode.com",
   whatsapp: "5491100000000",
