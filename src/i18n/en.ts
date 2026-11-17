@@ -13,7 +13,7 @@ export const en: Translations = {
     menuClose: "Close menu",
     menuLabel: "Main navigation",
     externalLink: "External link",
-    placeholder: "Placeholder",
+    placeholder: "Demo",
     contactCta: "Let's talk about your project",
     nav: [
       { id: "inicio", label: "Home" },
@@ -95,9 +95,9 @@ export const en: Translations = {
     titleHighlight: "for us.",
     subtitle: "Explore some of our developments and digital solutions.",
     disclaimer:
-      "The projects in this selection are demonstration concepts identified as placeholders. They will be replaced by real cases soon.",
+      "Each project opens an interactive demo built by LIMINAL BROS: a working single-view concept. These are not real client cases yet.",
     count: "03 / Demo",
-    external: "External link",
+    demo: "Interactive demo",
     view: "View project",
     nextTitle: "Your project could be next.",
     nextCta: "Start a project",
@@ -113,7 +113,7 @@ export const en: Translations = {
         technologies: ["Next.js", "TypeScript", "PostgreSQL"],
         image: "/projects/northline.svg",
         imageAlt: "Conceptual preview of Northline, an analytics dashboard",
-        href: "https://example.com",
+        href: "/demo/northline",
         featured: true,
         details: {
           overview:
@@ -139,7 +139,7 @@ export const en: Translations = {
         technologies: ["React", "Tailwind CSS", "Stripe"],
         image: "/projects/mesa.svg",
         imageAlt: "Conceptual preview of Mesa, a restaurant website",
-        href: "https://example.com",
+        href: "/demo/mesa",
         details: {
           overview:
             "Mesa combines reservations, menu and purchase in a warm editorial experience built for restaurants with a strong identity.",
@@ -164,7 +164,7 @@ export const en: Translations = {
         technologies: ["React", "Node.js", "Prisma"],
         image: "/projects/atlas.svg",
         imageAlt: "Conceptual preview of Atlas, an operations management panel",
-        href: "https://example.com",
+        href: "/demo/atlas",
         details: {
           overview:
             "Atlas gives visibility to projects, tasks and teams in one tool, reducing work scattered across multiple apps.",
@@ -295,7 +295,8 @@ export const en: Translations = {
     technologies: "Technologies",
     category: "Category",
     year: "Year",
-    external: "Open external project",
+    openProject: "Open project",
+    demoNote: "Navigable demo. Includes the first view of the product.",
     cta: "Start a project",
     notFound: "Project not found",
     notFoundBody: "The project you are looking for does not exist or has not been published yet.",

@@ -38,15 +38,6 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             aria-hidden="true"
           />
 
-          <div className="absolute left-3 top-3 flex items-center gap-2" aria-hidden="true">
-            <span className="rounded-full border border-white/15 bg-black/35 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/70 backdrop-blur-md">
-              {project.year}
-            </span>
-            <span className="hidden rounded-full border border-acid/20 bg-acid/10 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-acid backdrop-blur-md sm:inline-flex">
-              {useT().ui.placeholder}
-            </span>
-          </div>
-
           <span
             className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/35 text-white/70 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100"
             aria-hidden="true"
@@ -54,9 +45,20 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             <ArrowUpRight size={15} strokeWidth={1.6} />
           </span>
 
-          <div className="absolute bottom-3 left-3" aria-hidden="true">
-            <span className="rounded-full bg-black/45 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/60 backdrop-blur-md">
-              {project.category}
+          <div
+            className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2"
+            aria-hidden="true"
+          >
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-full bg-black/45 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/60 backdrop-blur-md">
+                {project.year}
+              </span>
+              <span className="rounded-full bg-black/45 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/60 backdrop-blur-md">
+                {project.category}
+              </span>
+            </div>
+            <span className="rounded-full border border-acid/25 bg-black/45 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-acid backdrop-blur-md">
+              {useT().ui.placeholder}
             </span>
           </div>
         </div>
@@ -114,7 +116,7 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             />
           </a>
           <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/20">
-            {useT().projects.external}
+            {useT().projects.demo}
           </span>
         </div>
       </div>

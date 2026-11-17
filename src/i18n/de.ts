@@ -13,7 +13,7 @@ export const de: Translations = {
     menuClose: "Menü schließen",
     menuLabel: "Hauptnavigation",
     externalLink: "Externer Link",
-    placeholder: "Platzhalter",
+    placeholder: "Demo",
     contactCta: "Sprechen wir über Ihr Projekt",
     nav: [
       { id: "inicio", label: "Start" },
@@ -95,9 +95,9 @@ export const de: Translations = {
     titleHighlight: "für uns sprechen.",
     subtitle: "Entdecken Sie einige unserer Entwicklungen und digitalen Lösungen.",
     disclaimer:
-      "Die Projekte in dieser Auswahl sind Demonstrationskonzepte und als Platzhalter gekennzeichnet. Sie werden bald durch echte Fälle ersetzt.",
+      "Jedes Projekt öffnet eine interaktive Demo von LIMINAL BROS: ein funktionsfähiges Konzept mit einer Ansicht. Noch keine echten Kundenfälle.",
     count: "03 / Demo",
-    external: "Externer Link",
+    demo: "Interaktive Demo",
     view: "Projekt ansehen",
     nextTitle: "Ihr Projekt könnte das nächste sein.",
     nextCta: "Projekt starten",
@@ -113,7 +113,7 @@ export const de: Translations = {
         technologies: ["Next.js", "TypeScript", "PostgreSQL"],
         image: "/projects/northline.svg",
         imageAlt: "Konzeptionelle Vorschau von Northline, einem Analyse-Dashboard",
-        href: "https://example.com",
+        href: "/demo/northline",
         featured: true,
         details: {
           overview:
@@ -139,7 +139,7 @@ export const de: Translations = {
         technologies: ["React", "Tailwind CSS", "Stripe"],
         image: "/projects/mesa.svg",
         imageAlt: "Konzeptionelle Vorschau von Mesa, einer Restaurant-Website",
-        href: "https://example.com",
+        href: "/demo/mesa",
         details: {
           overview:
             "Mesa verbindet Reservierungen, Karte und Kauf in einem warmen, editorialen Erlebnis für Restaurants mit starker Identität.",
@@ -164,7 +164,7 @@ export const de: Translations = {
         technologies: ["React", "Node.js", "Prisma"],
         image: "/projects/atlas.svg",
         imageAlt: "Konzeptionelle Vorschau von Atlas, einem Betriebsmanagement-Panel",
-        href: "https://example.com",
+        href: "/demo/atlas",
         details: {
           overview:
             "Atlas gibt Projekten, Aufgaben und Teams in einem Werkzeug Sichtbarkeit und reduziert Arbeit, die sonst über mehrere Apps verstreut ist.",
@@ -295,7 +295,8 @@ export const de: Translations = {
     technologies: "Technologien",
     category: "Kategorie",
     year: "Jahr",
-    external: "Externes Projekt öffnen",
+    openProject: "Projekt öffnen",
+    demoNote: "Navigierbare Demo. Enthält die erste Produktansicht.",
     cta: "Projekt starten",
     notFound: "Projekt nicht gefunden",
     notFoundBody: "Das gesuchte Projekt existiert nicht oder wurde noch nicht veröffentlicht.",

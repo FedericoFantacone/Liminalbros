@@ -88,7 +88,7 @@ export interface Translations {
     subtitle: string;
     disclaimer: string;
     count: string;
-    external: string;
+    demo: string;
     view: string;
     nextTitle: string;
     nextCta: string;
@@ -169,7 +169,8 @@ export interface Translations {
     technologies: string;
     category: string;
     year: string;
-    external: string;
+    openProject: string;
+    demoNote: string;
     cta: string;
     notFound: string;
     notFoundBody: string;

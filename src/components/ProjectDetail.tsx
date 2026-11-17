@@ -1,5 +1,7 @@
-import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { useEffect } from "react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { useT } from "../i18n";
+import { applyMeta } from "../lib/seo";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
 import { Reveal } from "./Reveal";
@@ -7,6 +9,15 @@ import { Reveal } from "./Reveal";
 export function ProjectDetail({ slug }: { slug: string }) {
   const t = useT();
   const project = t.projects.items.find((item) => item.id === slug || item.slug === slug);
+
+  useEffect(() => {
+    if (!project) return;
+    applyMeta({
+      title: `${project.name} — LIMINAL BROS`,
+      description: project.description,
+      path: `/proyectos/${project.id}`,
+    });
+  }, [project]);
 
   if (!project) {
     return (
@@ -67,20 +78,24 @@ export function ProjectDetail({ slug }: { slug: string }) {
                 </div>
 
                 <div className="mt-10 flex flex-wrap gap-3">
-                  <a
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary group"
-                  >
-                    {t.projectDetail.external}
-                    <ArrowUpRight size={16} strokeWidth={1.8} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  <a href={project.href} className="btn-primary group">
+                    {t.projectDetail.openProject}
+                    <ArrowRight
+                      size={16}
+                      strokeWidth={1.8}
+                      className="transition-transform duration-300 group-hover:translate-x-0.5"
+                    />
                   </a>
                   <a href="/#contacto" className="btn-secondary group">
                     {t.projectDetail.cta}
                     <ArrowUpRight size={16} strokeWidth={1.8} className="btn-arrow" />
                   </a>
                 </div>
+
+                <p className="mt-4 flex items-center gap-2 font-mono text-[9px] uppercase tracking-[0.12em] text-white/40">
+                  <span className="h-1 w-1 rounded-full bg-acid/70" />
+                  {t.projectDetail.demoNote}
+                </p>
               </div>
 
               <div className="lg:col-span-5">

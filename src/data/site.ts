@@ -30,6 +30,7 @@ export type Profile = {
 
 export const site = {
   name: "BROS",
+  url: "https://liminal-bros.netlify.app",
   tagline: "Building digital solutions.",
   email: "hola@bros.studio",
   whatsapp: "5491100000000",
@@ -118,7 +119,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "PostgreSQL"],
     image: "/projects/northline.svg",
     imageAlt: "Vista previa conceptual de Northline, dashboard de analítica",
-    href: "https://example.com",
+    href: "/demo/northline",
     featured: true,
   },
   {
@@ -131,7 +132,7 @@ export const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Stripe"],
     image: "/projects/mesa.svg",
     imageAlt: "Vista previa conceptual de Mesa, sitio de restaurante",
-    href: "https://example.com",
+    href: "/demo/mesa",
   },
   {
     id: "atlas",
@@ -143,7 +144,7 @@ export const projects: Project[] = [
     technologies: ["React", "Node.js", "Prisma"],
     image: "/projects/atlas.svg",
     imageAlt: "Vista previa conceptual de Atlas, panel de gestión operativa",
-    href: "https://example.com",
+    href: "/demo/atlas",
   },
 ];
 

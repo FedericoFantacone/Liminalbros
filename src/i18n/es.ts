@@ -13,7 +13,7 @@ export const es: Translations = {
     menuClose: "Cerrar menú",
     menuLabel: "Navegación principal",
     externalLink: "Enlace externo",
-    placeholder: "Placeholder",
+    placeholder: "Demo",
     contactCta: "Hablemos de tu proyecto",
     nav: [
       { id: "inicio", label: "Inicio" },
@@ -95,9 +95,9 @@ export const es: Translations = {
     titleHighlight: "por nosotros.",
     subtitle: "Explorá algunos de nuestros desarrollos y soluciones digitales.",
     disclaimer:
-      "Los proyectos de esta selección son conceptos de demostración y se identifican como placeholders. Próximamente se reemplazarán por casos reales.",
+      "Cada proyecto abre una demo interactiva desarrollada por LIMINAL BROS: un concepto funcional de una sola vista. Todavía no son casos de clientes reales.",
     count: "03 / Demo",
-    external: "Enlace externo",
+    demo: "Demo interactiva",
     view: "Ver proyecto",
     nextTitle: "Tu proyecto podría ser el próximo.",
     nextCta: "Empezar un proyecto",
@@ -113,7 +113,7 @@ export const es: Translations = {
         technologies: ["Next.js", "TypeScript", "PostgreSQL"],
         image: "/projects/northline.svg",
         imageAlt: "Vista previa conceptual de Northline, dashboard de analítica",
-        href: "https://example.com",
+        href: "/demo/northline",
         featured: true,
         details: {
           overview:
@@ -139,7 +139,7 @@ export const es: Translations = {
         technologies: ["React", "Tailwind CSS", "Stripe"],
         image: "/projects/mesa.svg",
         imageAlt: "Vista previa conceptual de Mesa, sitio de restaurante",
-        href: "https://example.com",
+        href: "/demo/mesa",
         details: {
           overview:
             "Mesa combina reservas, menú y compra en una experiencia editorial cálida, pensada para restaurantes con identidad fuerte.",
@@ -164,7 +164,7 @@ export const es: Translations = {
         technologies: ["React", "Node.js", "Prisma"],
         image: "/projects/atlas.svg",
         imageAlt: "Vista previa conceptual de Atlas, panel de gestión operativa",
-        href: "https://example.com",
+        href: "/demo/atlas",
         details: {
           overview:
             "Atlas da visibilidad a proyectos, tareas y equipos en una sola herramienta, reduciendo el trabajo disperso en múltiples apps.",
@@ -295,7 +295,8 @@ export const es: Translations = {
     technologies: "Tecnologías",
     category: "Categoría",
     year: "Año",
-    external: "Abrir proyecto externo",
+    openProject: "Abrir proyecto",
+    demoNote: "Demo navegable. Incluye la primera vista del producto.",
     cta: "Empezar un proyecto",
     notFound: "Proyecto no encontrado",
     notFoundBody: "El proyecto que buscás no existe o todavía no está publicado.",

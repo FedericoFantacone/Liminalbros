@@ -8,21 +8,31 @@ import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { ProjectDetail } from "./components/ProjectDetail";
+import { ProjectDemo } from "./components/demos";
+import { applyMeta } from "./lib/seo";
 
 function RoutedApp() {
   const { t } = useLanguage();
 
-  useEffect(() => {
-    document.title = t.meta.title;
-    const description = document.querySelector('meta[name="description"]');
-    if (description) description.setAttribute("content", t.meta.description);
-  }, [t]);
-
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
-  const projectSlugMatch = path.match(/^\/(?:proyectos?|project)\/([^/]+)$/);
+  const projectSlug = path.match(/^\/(?:proyectos?|project)\/([^/]+)$/)?.[1];
+  const demoSlug = path.match(/^\/demo\/([^/]+)$/)?.[1];
 
-  if (projectSlugMatch) {
-    return <ProjectDetail slug={decodeURIComponent(projectSlugMatch[1])} />;
+  useEffect(() => {
+    if (projectSlug || demoSlug) return;
+    applyMeta({
+      title: t.meta.title,
+      description: t.meta.description,
+      path: "/",
+    });
+  }, [t, projectSlug, demoSlug]);
+
+  if (projectSlug) {
+    return <ProjectDetail slug={decodeURIComponent(projectSlug)} />;
+  }
+
+  if (demoSlug) {
+    return <ProjectDemo slug={decodeURIComponent(demoSlug)} />;
   }
 
   return (
