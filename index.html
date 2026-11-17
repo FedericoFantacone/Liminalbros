@@ -46,7 +46,7 @@
         "@type": "ProfessionalService",
         "name": "LIMINAL CODE",
         "description": "Estudio de desarrollo de software y productos digitales.",
-        "email": "hola@liminalcode.com",
+        "email": "tino_boschiazzo@hotmail.com",
         "url": "https://liminalcode.netlify.app/",
         "areaServed": "Worldwide",
         "knowsAbout": [
@@ -61,6 +61,18 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- Formulario estático para Netlify Forms (no visible). El form real se renderiza en React. -->
+    <form name="contacto" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contacto" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="projectType" />
+      <textarea name="message"></textarea>
+    </form>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

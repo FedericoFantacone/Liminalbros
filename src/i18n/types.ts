@@ -31,6 +31,8 @@ export interface ProjectItem {
 export interface ProfileItem {
   id: string;
   name: string;
+  /** Short name used in compact labels (e.g. social links). */
+  shortName?: string;
   role: string;
   description: string;
   specialties: string[];
@@ -113,9 +115,7 @@ export interface Translations {
     availability: string;
     channels: {
       email: string;
-      whatsapp: string;
       linkedin: string;
-      linkedinValue: string;
     };
     responseTime: string;
     briefTitle: string;
@@ -144,9 +144,6 @@ export interface Translations {
     };
     submit: string;
     sending: string;
-    readyTitle: string;
-    readyBody: string;
-    readyLink: string;
     sentTitle: string;
     sentBody: string;
     error: string;

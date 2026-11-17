@@ -1,4 +1,4 @@
-import { ArrowUp, ArrowUpRight, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Linkedin, Mail } from "lucide-react";
 import { Logo } from "./Logo";
 import { site } from "../data/site";
 import { useT } from "../i18n";
@@ -49,12 +49,15 @@ export function Footer() {
           <div className="md:col-span-3">
             <p className="eyebrow">{t.footer.contactLabel}</p>
             <div className="mt-5 flex flex-col gap-3">
-              <a
-                href={`mailto:${site.email}`}
-                className="w-fit text-[13px] text-muted transition-colors hover:text-bone"
-              >
-                {site.email}
-              </a>
+              {site.emails.map((email) => (
+                <a
+                  key={email}
+                  href={`mailto:${email}`}
+                  className="w-fit break-all text-[13px] text-muted transition-colors hover:text-bone"
+                >
+                  {email}
+                </a>
+              ))}
               <span className="text-[13px] text-muted">{site.location}</span>
               <div className="mt-2 flex flex-wrap items-center gap-2">
                 {t.about.items
@@ -72,16 +75,7 @@ export function Footer() {
                     </a>
                   ))}
                 <a
-                  href={`https://wa.me/${site.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Escribir por WhatsApp"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-all hover:border-acid/30 hover:text-acid"
-                >
-                  <MessageCircle size={14} strokeWidth={1.5} />
-                </a>
-                <a
-                  href={`mailto:${site.email}`}
+                  href={`mailto:${site.emails[0]}`}
                   aria-label="Enviar un email"
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/45 transition-all hover:border-acid/30 hover:text-acid"
                 >

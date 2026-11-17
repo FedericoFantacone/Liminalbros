@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { Logo } from "./Logo";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { site } from "../data/site";
@@ -253,22 +253,12 @@ export function Navbar() {
           <div className="space-y-4 pt-8">
             <LanguageSwitcher className="w-full justify-center" />
             <a
-              href={`mailto:${site.email}`}
+              href={`mailto:${site.emails[0]}`}
               className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-bone"
               tabIndex={open ? 0 : -1}
             >
               <Mail size={15} strokeWidth={1.6} />
-              {site.email}
-            </a>
-            <a
-              href={`https://wa.me/${site.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 text-sm text-muted transition-colors hover:text-bone"
-              tabIndex={open ? 0 : -1}
-            >
-              <MessageCircle size={15} strokeWidth={1.6} />
-              WhatsApp
+              {site.emails[0]}
             </a>
             <a
               href="/#contacto"

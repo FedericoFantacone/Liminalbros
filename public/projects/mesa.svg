@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
   <defs>
     <linearGradient id="m-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#f4efe5"/>
-      <stop offset="1" stop-color="#e9e1d2"/>
+      <stop offset="0" stop-color="#fbf7ee"/>
+      <stop offset="1" stop-color="#f2ecdf"/>
     </linearGradient>
     <linearGradient id="m-photo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#566044"/>
@@ -23,12 +23,6 @@
       <stop offset="0" stop-color="#8c9f5a"/>
       <stop offset="1" stop-color="#3f5128"/>
     </linearGradient>
-    <filter id="m-grain">
-      <feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="3" stitchTiles="stitch"/>
-      <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="linear" slope=".09"/></feComponentTransfer>
-      <feBlend in="SourceGraphic" mode="multiply"/>
-    </filter>
     <filter id="m-shadow" x="-50%" y="-50%" width="200%" height="200%">
       <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#10140d" flood-opacity=".28"/>
     </filter>
@@ -122,6 +116,4 @@
   <g fill="#252a21" opacity=".55">
     <text x="596" y="172" font-family="Arial, sans-serif" font-size="8" letter-spacing="2" transform="rotate(90 596 172)">MESA — BUENOS AIRES</text>
   </g>
-
-  <rect width="1200" height="800" filter="url(#m-grain)" opacity=".35"/>
 </svg>

@@ -5,7 +5,6 @@ import {
   Linkedin,
   Lock,
   Mail,
-  MessageCircle,
   Send,
 } from "lucide-react";
 import { site } from "../data/site";
@@ -21,7 +20,9 @@ type FormValues = {
 };
 
 type FormErrors = Partial<Record<keyof FormValues, string>>;
-type FormStatus = "idle" | "sending" | "ready" | "sent" | "error";
+type FormStatus = "idle" | "sending" | "sent" | "error";
+
+const NETLIFY_FORM_NAME = "contacto";
 
 const initialValues: FormValues = {
   name: "",
@@ -48,7 +49,6 @@ export function Contact() {
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
   const [status, setStatus] = useState<FormStatus>("idle");
-  const [mailtoHref, setMailtoHref] = useState("");
 
   const updateField = (field: keyof FormValues, value: string) => {
     setValues((current) => ({ ...current, [field]: value }));
@@ -58,7 +58,7 @@ export function Contact() {
       delete next[field];
       return next;
     });
-    if (status === "ready" || status === "error") setStatus("idle");
+    if (status === "error") setStatus("idle");
   };
 
   const onChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -79,38 +79,42 @@ export function Contact() {
     }
 
     setErrors({});
+    setStatus("sending");
 
-    if (site.formEndpoint) {
-      setStatus("sending");
-      try {
+    try {
+      if (site.formEndpoint) {
         const response = await fetch(site.formEndpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(values),
         });
         if (!response.ok) throw new Error("Form submission failed");
-        setStatus("sent");
-        setValues(initialValues);
-      } catch {
-        setStatus("error");
+      } else {
+        const payload = new URLSearchParams({
+          "form-name": NETLIFY_FORM_NAME,
+          "bot-field": "",
+          ...values,
+        });
+
+        if (import.meta.env.DEV) {
+          // Netlify Forms only procesa envíos en el sitio publicado; en local simulamos el éxito.
+          console.info("[contacto] Envío simulado en desarrollo:", Object.fromEntries(payload));
+          await new Promise((resolve) => setTimeout(resolve, 600));
+        } else {
+          const response = await fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: payload.toString(),
+          });
+          if (!response.ok) throw new Error("Form submission failed");
+        }
       }
-      return;
+
+      setStatus("sent");
+      setValues(initialValues);
+    } catch {
+      setStatus("error");
     }
-
-    const subject = `${c.briefTitle} · ${values.projectType} · ${values.name}`;
-    const body = [
-      `Nombre: ${values.name}`,
-      `Email: ${values.email}`,
-      `Empresa: ${values.company || "-"}`,
-      `Tipo de proyecto: ${values.projectType}`,
-      "",
-      values.message,
-    ].join("\n");
-
-    const href = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setMailtoHref(href);
-    setStatus("ready");
-    window.location.href = href;
   };
 
   const inputClass = (field: keyof FormValues) =>
@@ -120,15 +124,20 @@ export function Contact() {
     .filter((profile) => profile.linkedin)
     .map((profile) => ({
       icon: Linkedin,
-      label: `${c.channels.linkedin} · ${profile.name.split(" ")[0]}`,
+      label: `${c.channels.linkedin} · ${profile.shortName ?? profile.name.split(" ")[0]}`,
       value: profile.name,
       href: profile.linkedin as string,
       external: true,
     }));
 
   const channels = [
-    { icon: Mail, label: c.channels.email, value: site.email, href: `mailto:${site.email}`, external: false },
-    { icon: MessageCircle, label: c.channels.whatsapp, value: site.whatsappDisplay, href: `https://wa.me/${site.whatsapp}`, external: true },
+    ...site.emails.map((email) => ({
+      icon: Mail,
+      label: c.channels.email,
+      value: email,
+      href: `mailto:${email}`,
+      external: false,
+    })),
     ...linkedinChannels,
   ];
 
@@ -168,7 +177,7 @@ export function Contact() {
                   const Icon = channel.icon;
                   return (
                     <a
-                      key={channel.label}
+                      key={channel.href}
                       href={channel.href}
                       target={channel.external ? "_blank" : undefined}
                       rel={channel.external ? "noopener noreferrer" : undefined}
@@ -358,30 +367,15 @@ export function Contact() {
                   </div>
 
                   <div aria-live="polite" aria-atomic="true">
-                    {(status === "ready" || status === "sent") && (
+                    {status === "sent" && (
                       <div
                         role="status"
                         className="mt-6 flex items-start gap-3 rounded-xl border border-acid/20 bg-acid/[0.055] p-4"
                       >
                         <CheckCircle2 size={17} strokeWidth={1.7} className="mt-0.5 shrink-0 text-acid" />
                         <div>
-                          <p className="text-[13px] font-medium text-bone">
-                            {status === "sent" ? c.sentTitle : c.readyTitle}
-                          </p>
-                          <p className="mt-1 text-[11px] leading-relaxed text-white/45">
-                            {status === "sent"
-                              ? c.sentBody
-                              : `${c.readyBody} `}
-                            {status === "ready" && (
-                              <a
-                                href={mailtoHref}
-                                className="text-acid underline decoration-acid/30 underline-offset-2 hover:decoration-acid"
-                              >
-                                {c.readyLink}
-                              </a>
-                            )}
-                            {status === "ready" && "."}
-                          </p>
+                          <p className="text-[13px] font-medium text-bone">{c.sentTitle}</p>
+                          <p className="mt-1 text-[11px] leading-relaxed text-white/45">{c.sentBody}</p>
                         </div>
                       </div>
                     )}
@@ -392,8 +386,8 @@ export function Contact() {
                         className="mt-6 rounded-xl border border-[#ff9d9d]/20 bg-[#ff9d9d]/[0.05] p-4 text-[12px] text-[#ffb3b3]"
                       >
                         {c.error}{" "}
-                        <a className="underline underline-offset-2" href={`mailto:${site.email}`}>
-                          {site.email}
+                        <a className="underline underline-offset-2" href={`mailto:${site.emails[0]}`}>
+                          {site.emails[0]}
                         </a>
                         .
                       </div>

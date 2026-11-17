@@ -12,7 +12,7 @@ type ProjectCardProps = {
 function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
   return (
     <article
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[linear-gradient(150deg,rgba(255,255,255,0.03),rgba(255,255,255,0.008))] transition-all duration-500 hover:border-white/[0.16] ${
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[linear-gradient(150deg,rgba(255,255,255,0.03),rgba(255,255,255,0.008))] transition-all duration-500 hover:-translate-y-1.5 hover:border-acid/35 hover:shadow-[0_36px_90px_-28px_rgba(215,255,79,0.28)] ${
         featured ? "lg:grid lg:grid-cols-[1.16fr_0.84fr]" : "flex h-full flex-col"
       }`}
     >
@@ -30,11 +30,16 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             height={800}
             loading={index === 0 ? "eager" : "lazy"}
             decoding="async"
-            className="project-image h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+            className="project-image h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.05] group-hover:brightness-110"
           />
 
           <div
             className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/[0.08] opacity-70"
+            aria-hidden="true"
+          />
+
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(215,255,79,0.28),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             aria-hidden="true"
           />
 

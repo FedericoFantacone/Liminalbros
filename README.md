@@ -66,17 +66,14 @@ Reemplazar los valores de `site`:
 
 ```ts
 export const site = {
-  email: "hola@liminalcode.com",
-  whatsapp: "5491100000000",        // formato internacional, sin + ni espacios
-  whatsappDisplay: "+54 9 11 0000 0000",
+  emails: ["tino_boschiazzo@hotmail.com", "federicofantacone1@gmail.com"],
   linkedin: "https://www.linkedin.com/in/federico-fantacone/",
   location: "Buenos Aires, Argentina",
   formEndpoint: "",
 };
 ```
 
-- `email` se usa en el formulario, el footer y los enlaces `mailto`.
-- `whatsapp` se usa para generar `https://wa.me/<número>`.
+- `emails` se muestran en el footer y la sección de contacto; el primero se usa como destino del formulario y de los enlaces `mailto`.
 - `linkedin` debe ser la URL pública real del estudio.
 
 ### 2. Proyectos
@@ -127,14 +124,20 @@ Si se define `image`, la tarjeta muestra la fotografía. Si no, usa una composic
 
 ### 4. Formulario de contacto
 
-No hay backend en esta versión. El comportamiento por defecto:
+El formulario usa **Netlify Forms** (sin backend propio). Los envíos quedan guardados en el panel de Netlify y se reenvían por email a los destinatarios configurados.
 
 1. Valida nombre, email, tipo de proyecto y mensaje.
-2. Prepara un email completo con todos los datos.
-3. Abre el cliente de correo del visitante mediante `mailto:`.
-4. Muestra un estado con un enlace alternativo por si el cliente de correo no se abre.
+2. Envía un `POST` a `/` con `form-name=contacto` (formulario estático declarado en `index.html`).
+3. Muestra un estado de éxito o, si falla, un email alternativo.
 
-Para usar un servicio como Formspree, Basin o un endpoint propio, completar `formEndpoint`:
+Requisitos y límites:
+
+- Netlify debe detectar el formulario en un **deploy desde Git** (los deploys por CLI no procesan formularios).
+- Plan gratuito: 100 envíos por mes.
+- Los avisos por email se configuran en **Netlify → Forms → contacto → Notifications**. Hay que crear una notificación por cada destinatario.
+- Incluye un honeypot (`bot-field`) para filtrar spam.
+
+Para usar un servicio externo (Formspree, Basin o un endpoint propio), completar `formEndpoint`:
 
 ```ts
 formEndpoint: "https://formspree.io/f/XXXXXXXX",

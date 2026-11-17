@@ -198,6 +198,7 @@ export const en: Translations = {
       {
         id: "01",
         name: "José Valentino Boschiazzo",
+        shortName: "Valentino",
         role: "Co-Founder & CEO",
         description:
           "Electronics engineer with experience in industrial automation, field validation and software development. He has worked across Europe inspecting combustion engines, designing internal Python tools and programming PLCs and microcontrollers. He bridges mechanics, electronics and software to build robust technical solutions.",
@@ -208,6 +209,7 @@ export const en: Translations = {
       {
         id: "02",
         name: "Federico Fantacone",
+        shortName: "Federico",
         role: "Co-Founder & CEO",
         description:
           "Semi-Senior Full Stack Developer specialized in .NET, C# and Microsoft Azure. He works at Accenture designing and maintaining enterprise applications, APIs, databases and cloud infrastructure, with a focus on clean architecture and scalable solutions.",
@@ -229,9 +231,7 @@ export const en: Translations = {
     availability: "Available for new projects",
     channels: {
       email: "Email",
-      whatsapp: "WhatsApp",
       linkedin: "LinkedIn",
-      linkedinValue: "Federico Fantacone",
     },
     responseTime: "Austria · GMT+1 / Argentina · GMT-3 · Reply within 1–2 business days",
     briefTitle: "Initial brief",
@@ -269,9 +269,6 @@ export const en: Translations = {
     },
     submit: "Send message",
     sending: "Sending...",
-    readyTitle: "Your message is ready.",
-    readyBody: "We opened your email client so you can send it. If it did not open,",
-    readyLink: "use this link",
     sentTitle: "Message sent. Thanks for reaching out.",
     sentBody: "We will reply shortly.",
     error: "We could not send the form. Write to us directly at",
