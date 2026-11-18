@@ -19,7 +19,7 @@ interface ContactPayload {
   "bot-field"?: string;
 }
 
-const DEFAULT_RECIPIENTS = ["tino_boschiazzo@hotmail.com", "federicofantacone1@gmail.com"];
+const DEFAULT_RECIPIENTS = ["fede26f23@gmail.com"];
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
