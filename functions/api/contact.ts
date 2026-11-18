@@ -1,5 +1,4 @@
 // Cloudflare Pages Function - endpoint de contacto.
-/// <reference types="@cloudflare/workers-types" />
 
 interface Env {
   RESEND_API_KEY?: string;
@@ -93,8 +92,9 @@ async function sendWithMailChannels(env: Env, payload: ContactPayload, recipient
   return res;
 }
 
-export const onRequestPost: PagesFunction<Env> = async (context) => {
-  const { request, env } = context;
+export const onRequestPost = async (context: any) => {
+  const { request } = context;
+  const env = (context.env || {}) as Env;
 
   let payload: ContactPayload;
   try {
