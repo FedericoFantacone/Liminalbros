@@ -36,17 +36,17 @@ export type Profile = {
 
 export const site = {
   name: "LIMINAL CODE",
-  url: "https://liminalcode.netlify.app",
+  url: "https://liminalcode.pages.dev",
   tagline: "Building digital solutions.",
   emails: ["tino_boschiazzo@hotmail.com", "federicofantacone1@gmail.com"],
   linkedin: "https://www.linkedin.com/in/federico-fantacone/",
   location: "Austria · Argentina",
   availability: "Disponibles para nuevos proyectos",
   /**
-   * Optional form endpoint (Formspree, Basin, etc.).
-   * If empty, the form prepares an email in the visitor's mail client.
+   * Endpoint del formulario (Cloudflare Pages Function en /api/contact).
+   * Si esta vacio, se usa el fallback de email del cliente.
    */
-  formEndpoint: "",
+  formEndpoint: "/api/contact",
 };
 
 export const navItems = [

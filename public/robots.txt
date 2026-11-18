@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://liminalcode.netlify.app/sitemap.xml
+Sitemap: https://liminalcode.pages.dev/sitemap.xml

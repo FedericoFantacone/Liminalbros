@@ -82,7 +82,7 @@ export function Contact() {
     setStatus("sending");
 
     try {
-      if (site.formEndpoint) {
+      if (site.formEndpoint && !(import.meta.env.DEV && site.formEndpoint.startsWith("/"))) {
         const response = await fetch(site.formEndpoint, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },

@@ -129,18 +129,19 @@ Si se define `image`, la tarjeta muestra la fotografía. Si no, usa una composic
 
 ### 4. Formulario de contacto
 
-El formulario usa **Netlify Forms** (sin backend propio). Los envíos quedan guardados en el panel de Netlify y se reenvían por email a los destinatarios configurados.
+El formulario se envía a la **Cloudflare Pages Function** `/api/contact` (`functions/api/contact.ts`). La función envía un email a los destinatarios configurados (por defecto los dos emails del estudio) usando **Resend** (si existe `RESEND_API_KEY`) o **MailChannels** como fallback gratuito.
 
 1. Valida nombre, email, tipo de proyecto y mensaje.
-2. Envía un `POST` a `/` con `form-name=contacto` (formulario estático declarado en `index.html`).
+2. Hace `POST` con JSON a `/api/contact`.
 3. Muestra un estado de éxito o, si falla, un email alternativo.
 
-Requisitos y límites:
+Variables de entorno (configurar en Cloudflare Pages → Settings → Environment variables):
 
-- Netlify debe detectar el formulario en un **deploy desde Git** (los deploys por CLI no procesan formularios).
-- Plan gratuito: 100 envíos por mes.
-- Los avisos por email se configuran en **Netlify → Forms → contacto → Notifications**. Hay que crear una notificación por cada destinatario.
-- Incluye un honeypot (`bot-field`) para filtrar spam.
+- `RESEND_API_KEY` (opcional, recomendado): API key de Resend.
+- `RECIPIENTS` (opcional): lista separada por comas de destinatarios. Por defecto los dos emails del estudio.
+- `FROM_EMAIL` / `FROM_NAME` (opcionales): remitente del email.
+
+Incluye un honeypot (`bot-field`) para filtrar spam.
 
 Para usar un servicio externo (Formspree, Basin o un endpoint propio), completar `formEndpoint`:
 
@@ -175,15 +176,22 @@ El sitio incluye title, description, Open Graph, datos estructurados `Profession
 - Lighthouse (build local): **Accessibility 100**, **Best Practices 100**, **SEO 100**
 - axe-core WCAG 2.1 A/AA: **0 violaciones** en desktop y mobile
 
-## Deploy
+## Deploy (Cloudflare Pages)
 
-El proyecto genera un sitio estático en `dist/`. Compatible con Vercel, Netlify o cualquier hosting estático.
+El proyecto genera un sitio estático en `dist/` y una Cloudflare Pages Function en `functions/`.
+
+1. Conectar el repositorio en Cloudflare Pages (Workers & Pages → Create → Pages → Connect to Git).
+2. Build command: `npm run build`
+3. Build output directory: `dist`
+4. Agregar las variables de entorno (ver sección 4).
+5. Configurar el dominio final en `index.html`, `public/robots.txt` y `public/sitemap.xml`.
+
+Para deploy local con Wrangler:
 
 ```bash
 npm run build
+npx wrangler pages deploy dist
 ```
-
-Configurar el dominio final y revisar los datos de contacto antes de publicar.
 
 ---
 
