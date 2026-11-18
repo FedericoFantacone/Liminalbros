@@ -88,7 +88,15 @@ export function Contact() {
           headers: { "Content-Type": "application/json", Accept: "application/json" },
           body: JSON.stringify(values),
         });
-        if (!response.ok) throw new Error("Form submission failed");
+        if (!response.ok) {
+          let detail = "";
+          try {
+            const data = await response.json();
+            detail = data?.detail || data?.error || "";
+          } catch {}
+          console.error("Form submission failed:", response.status, detail);
+          throw new Error(detail || "Form submission failed");
+        }
       } else {
         const payload = new URLSearchParams({
           "form-name": NETLIFY_FORM_NAME,

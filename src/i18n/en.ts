@@ -117,7 +117,7 @@ export const en: Translations = {
         video: "/projects/wiesing-cover.mp4",
         imageAlt:
           "Homepage of the Gemeinde Wiesing website with the Tyrolean landscape",
-        href: "https://wiesing-tirol.netlify.app/",
+        href: "https://wiesing-tirol.pages.dev/",
         external: true,
         kind: "real",
         featured: true,
