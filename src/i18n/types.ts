@@ -22,8 +22,14 @@ export interface ProjectItem {
   year: string;
   technologies: string[];
   image: string;
+  /** Optional looping video used as the cover. Falls back to `image`. */
+  video?: string;
   imageAlt: string;
   href: string;
+  /** External project links open in a new tab. */
+  external?: boolean;
+  /** `real` marks client work; defaults to a concept demo. */
+  kind?: "demo" | "real";
   featured?: boolean;
   details: ProjectDetail;
 }
@@ -91,7 +97,9 @@ export interface Translations {
     disclaimer: string;
     count: string;
     demo: string;
+    real: string;
     view: string;
+    nextLabel: string;
     nextTitle: string;
     nextCta: string;
     items: ProjectItem[];

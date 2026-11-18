@@ -4,6 +4,7 @@ import { useT } from "../i18n";
 import { applyMeta } from "../lib/seo";
 import { Footer } from "./Footer";
 import { Navbar } from "./Navbar";
+import { ProjectMedia } from "./ProjectMedia";
 import { Reveal } from "./Reveal";
 
 export function ProjectDetail({ slug }: { slug: string }) {
@@ -78,7 +79,13 @@ export function ProjectDetail({ slug }: { slug: string }) {
                 </div>
 
                 <div className="mt-10 flex flex-wrap gap-3">
-                  <a href={project.href} className="btn-primary group">
+                  <a
+                    href={project.href}
+                    className="btn-primary group"
+                    {...(project.external
+                      ? { target: "_blank", rel: "noreferrer noopener" }
+                      : {})}
+                  >
                     {t.projectDetail.openProject}
                     <ArrowRight
                       size={16}
@@ -100,11 +107,11 @@ export function ProjectDetail({ slug }: { slug: string }) {
 
               <div className="lg:col-span-5">
                 <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#141714] p-3">
-                  <img
-                    src={project.image}
+                  <ProjectMedia
+                    image={project.image}
+                    video={project.video}
                     alt={project.imageAlt}
-                    width={1200}
-                    height={800}
+                    eager
                     className="project-image h-full w-full rounded-xl object-cover"
                   />
                 </div>

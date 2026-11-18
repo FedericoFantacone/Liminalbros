@@ -1,5 +1,6 @@
 import { ArrowUpRight, Info, MoveUpRight } from "lucide-react";
 import { useT } from "../i18n";
+import { ProjectMedia } from "./ProjectMedia";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -10,9 +11,12 @@ type ProjectCardProps = {
 };
 
 function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
+  const t = useT();
+  const badge = project.kind === "real" ? t.projects.real : t.projects.demo;
+
   return (
     <article
-      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[linear-gradient(150deg,rgba(255,255,255,0.03),rgba(255,255,255,0.008))] transition-all duration-500 hover:-translate-y-1.5 hover:border-acid/35 hover:shadow-[0_36px_90px_-28px_rgba(215,255,79,0.28)] ${
+      className={`group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[linear-gradient(150deg,rgba(255,255,255,0.03),rgba(255,255,255,0.008))] transition-[transform,border-color,box-shadow] duration-200 ease-out hover:-translate-y-1 hover:border-acid/40 hover:shadow-[0_22px_55px_-26px_rgba(215,255,79,0.32)] ${
         featured ? "lg:grid lg:grid-cols-[1.16fr_0.84fr]" : "flex h-full flex-col"
       }`}
     >
@@ -23,14 +27,12 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
         }`}
       >
         <div className="relative aspect-[3/2] overflow-hidden rounded-xl bg-[#141714]">
-          <img
-            src={project.image}
+          <ProjectMedia
+            image={project.image}
+            video={project.video}
             alt={`${project.imageAlt}. ${project.category}.`}
-            width={1200}
-            height={800}
-            loading={index === 0 ? "eager" : "lazy"}
-            decoding="async"
-            className="project-image h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-[1.05] group-hover:brightness-110"
+            eager={index === 0}
+            className="project-image h-full w-full object-cover transition-[transform,filter] duration-200 ease-out group-hover:scale-[1.04] group-hover:brightness-[1.06]"
           />
 
           <div
@@ -39,12 +41,12 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
           />
 
           <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(215,255,79,0.28),transparent_65%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_-10%,rgba(215,255,79,0.22),transparent_65%)] opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100"
             aria-hidden="true"
           />
 
           <span
-            className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/35 text-white/70 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100"
+            className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-black/35 text-white/70 opacity-0 backdrop-blur-md transition-[opacity,transform] duration-150 ease-out group-hover:scale-100 group-hover:opacity-100"
             aria-hidden="true"
           >
             <ArrowUpRight size={15} strokeWidth={1.6} />
@@ -63,7 +65,7 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
               </span>
             </div>
             <span className="rounded-full border border-acid/25 bg-black/45 px-3 py-1.5 font-mono text-[8px] uppercase tracking-[0.14em] text-acid backdrop-blur-md">
-              {useT().ui.placeholder}
+              {badge}
             </span>
           </div>
         </div>
@@ -77,7 +79,7 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
         <div className="flex items-start justify-between gap-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/30">
-              {useT().projects.label} / {String(index + 1).padStart(2, "0")}
+              {t.projects.label} / {String(index + 1).padStart(2, "0")}
             </p>
             <h3
               className={`mt-3 font-medium tracking-[-0.045em] text-bone ${
@@ -113,7 +115,7 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             href={`/proyectos/${project.id}`}
             className="group/link inline-flex items-center gap-2 text-[13px] font-medium text-bone transition-colors hover:text-acid"
           >
-            {useT().projects.view}
+            {t.projects.view}
             <MoveUpRight
               size={14}
               strokeWidth={1.7}
@@ -121,7 +123,7 @@ function ProjectCard({ project, index, featured = false }: ProjectCardProps) {
             />
           </a>
           <span className="font-mono text-[8px] uppercase tracking-[0.14em] text-white/20">
-            {useT().projects.demo}
+            {badge}
           </span>
         </div>
       </div>
@@ -182,7 +184,7 @@ export function Projects() {
             </Reveal>
           )}
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-3">
             {rest.map((project, index) => (
               <Reveal key={project.id} delay={index * 100} className="h-full">
                 <ProjectCard project={project} index={projects.indexOf(project)} />
@@ -194,7 +196,7 @@ export function Projects() {
         <Reveal delay={100}>
           <div className="mt-6 flex flex-col items-start justify-between gap-6 overflow-hidden rounded-2xl border border-white/[0.09] bg-[linear-gradient(120deg,rgba(215,255,79,0.07),rgba(255,255,255,0.015)_40%,rgba(255,255,255,0.01))] p-7 sm:p-9 md:flex-row md:items-center">
             <div>
-              <p className="eyebrow">Próximo caso de estudio</p>
+              <p className="eyebrow">{t.projects.nextLabel}</p>
               <h3 className="mt-3 max-w-xl text-balance text-[clamp(1.6rem,3vw,2.4rem)] font-medium tracking-[-0.045em]">
                 {t.projects.nextTitle}
               </h3>

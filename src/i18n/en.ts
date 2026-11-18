@@ -95,13 +95,45 @@ export const en: Translations = {
     titleHighlight: "for us.",
     subtitle: "Explore some of our developments and digital solutions.",
     disclaimer:
-      "Each project opens an interactive demo built by LIMINAL CODE: a working single-view concept.",
-    count: "03 / Demo",
+      "One real project for the Gemeinde Wiesing and three interactive concepts built by LIMINAL CODE.",
+    count: "04 / Projects",
     demo: "Interactive demo",
+    real: "Client project",
     view: "View project",
+    nextLabel: "Next case study",
     nextTitle: "Your project could be next.",
     nextCta: "Start a project",
     items: [
+      {
+        id: "wiesing",
+        slug: "wiesing",
+        name: "Wiesing",
+        description:
+          "Website redesign for the Gemeinde Wiesing (Tyrol, Austria): 61 static pages, built-in search, integrated accessibility and three languages.",
+        category: "Municipal website",
+        year: "2026",
+        technologies: ["HTML5", "CSS3", "JavaScript", "Zero dependencies"],
+        image: "/projects/wiesing-cover.jpg",
+        video: "/projects/wiesing-cover.mp4",
+        imageAlt:
+          "Homepage of the Gemeinde Wiesing website with the Tyrolean landscape",
+        href: "https://wiesing-tirol.netlify.app/",
+        external: true,
+        kind: "real",
+        featured: true,
+        details: {
+          overview:
+            "Complete redesign of the municipal website of Wiesing, a community in Tyrol, Austria. It brings services, news and administrative procedures into one clear experience, with navigation in German, English and Spanish.",
+          system:
+            "Static site with no framework and no runtime dependencies. Semantic HTML, custom CSS and JavaScript for search, dialogs and accessibility preferences, plus locally hosted WebP/AVIF images and WOFF2 fonts.",
+          features: [
+            "61 static pages with semantic HTML",
+            "Client-side search with umlaut normalization",
+            "Accessibility panel: contrast and text size",
+            "Three languages (DE/EN/ES) with hreflang",
+          ],
+        },
+      },
       {
         id: "northline",
         slug: "northline",
@@ -114,7 +146,6 @@ export const en: Translations = {
         image: "/projects/northline.svg",
         imageAlt: "Conceptual preview of Northline, an analytics dashboard",
         href: "/demo/northline",
-        featured: true,
         details: {
           overview:
             "Northline organizes metrics, events and data sources into a clear interface for teams that make decisions every day.",

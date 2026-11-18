@@ -95,13 +95,45 @@ export const de: Translations = {
     titleHighlight: "für uns sprechen.",
     subtitle: "Entdecken Sie einige unserer Entwicklungen und digitalen Lösungen.",
     disclaimer:
-      "Jedes Projekt öffnet eine interaktive Demo von LIMINAL CODE: ein funktionsfähiges Konzept mit einer Ansicht.",
-    count: "03 / Demo",
+      "Ein reales Projekt für die Gemeinde Wiesing und drei interaktive Konzepte von LIMINAL CODE.",
+    count: "04 / Projekte",
     demo: "Interaktive Demo",
+    real: "Kundenprojekt",
     view: "Projekt ansehen",
+    nextLabel: "Nächste Fallstudie",
     nextTitle: "Ihr Projekt könnte das nächste sein.",
     nextCta: "Projekt starten",
     items: [
+      {
+        id: "wiesing",
+        slug: "wiesing",
+        name: "Wiesing",
+        description:
+          "Redesign der Website der Gemeinde Wiesing (Tirol, Österreich): 61 statische Seiten, eigene Suche, integrierte Barrierefreiheit und drei Sprachen.",
+        category: "Gemeinde-Website",
+        year: "2026",
+        technologies: ["HTML5", "CSS3", "JavaScript", "Keine Abhängigkeiten"],
+        image: "/projects/wiesing-cover.jpg",
+        video: "/projects/wiesing-cover.mp4",
+        imageAlt:
+          "Startseite der Website der Gemeinde Wiesing mit Tiroler Landschaft",
+        href: "https://wiesing-tirol.netlify.app/",
+        external: true,
+        kind: "real",
+        featured: true,
+        details: {
+          overview:
+            "Vollständiges Redesign der Website der Gemeinde Wiesing in Tirol, Österreich. Sie bündelt Services, Neuigkeiten und Amtswege in einer klaren Erfahrung – mit Navigation auf Deutsch, Englisch und Spanisch.",
+          system:
+            "Statische Website ohne Framework und ohne Laufzeit-Abhängigkeiten. Semantisches HTML, eigenes CSS und JavaScript für Suche, Dialoge und Barrierefreiheits-Einstellungen, dazu lokal gehostete WebP-/AVIF-Bilder und WOFF2-Schriften.",
+          features: [
+            "61 statische Seiten mit semantischem HTML",
+            "Clientseitige Suche mit Umlaut-Normalisierung",
+            "Barrierefreiheits-Panel: Kontrast und Textgröße",
+            "Drei Sprachen (DE/EN/ES) mit hreflang",
+          ],
+        },
+      },
       {
         id: "northline",
         slug: "northline",
@@ -114,7 +146,6 @@ export const de: Translations = {
         image: "/projects/northline.svg",
         imageAlt: "Konzeptionelle Vorschau von Northline, einem Analyse-Dashboard",
         href: "/demo/northline",
-        featured: true,
         details: {
           overview:
             "Northline ordnet Metriken, Ereignisse und Datenquellen in einer klaren Oberfläche für Teams, die täglich Entscheidungen treffen.",

@@ -14,8 +14,14 @@ export type Project = {
   year: string;
   technologies: string[];
   image: string;
+  /** Optional looping video used as the cover. Falls back to `image`. */
+  video?: string;
   imageAlt: string;
   href: string;
+  /** External project links open in a new tab. */
+  external?: boolean;
+  /** `real` marks client work; defaults to a concept demo. */
+  kind?: "demo" | "real";
   featured?: boolean;
 };
 
@@ -108,6 +114,22 @@ export const services: Service[] = [
  */
 export const projects: Project[] = [
   {
+    id: "wiesing",
+    name: "Wiesing",
+    description:
+      "Rediseño del sitio web de la Gemeinde Wiesing (Tirol, Austria): 61 páginas estáticas, búsqueda propia y accesibilidad integrada.",
+    category: "Sitio institucional",
+    year: "2026",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Sin dependencias"],
+    image: "/projects/wiesing-cover.jpg",
+    video: "/projects/wiesing-cover.mp4",
+    imageAlt: "Portada del sitio web de la Gemeinde Wiesing con el paisaje del Tirol",
+    href: "https://wiesing-tirol.netlify.app/",
+    external: true,
+    kind: "real",
+    featured: true,
+  },
+  {
     id: "northline",
     name: "Northline",
     description:
@@ -118,7 +140,6 @@ export const projects: Project[] = [
     image: "/projects/northline.svg",
     imageAlt: "Vista previa conceptual de Northline, dashboard de analítica",
     href: "/demo/northline",
-    featured: true,
   },
   {
     id: "mesa",

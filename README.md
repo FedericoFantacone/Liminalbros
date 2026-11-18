@@ -32,7 +32,7 @@ npm run lint     # ESLint
 
 ```text
 public/
-  projects/              # capturas conceptuales de los proyectos (SVG)
+  projects/              # portadas de los proyectos (SVG, JPG y video MP4)
   favicon.svg
   og-logo.svg           # imagen Open Graph cuadrada (1024x1024)
   robots.txt
@@ -80,30 +80,35 @@ export const site = {
 
 La sección está preparada para agregar, editar o eliminar proyectos sin tocar el componente visual.
 
-Cada proyecto vive en el array `projects`:
+El contenido de cada proyecto vive en `src/i18n/es.ts`, `en.ts` y `de.ts` (clave `projects.items`), para que nombre, descripción, categoría y tecnologías se traduzcan en los tres idiomas. El tipo está en `src/i18n/types.ts`.
 
 ```ts
 {
   id: "nuevo-proyecto",
+  slug: "nuevo-proyecto",
   name: "Nombre del proyecto",
   description: "Descripción breve.",
   category: "Web",
   year: "2026",
   technologies: ["Next.js", "TypeScript"],
-  image: "/projects/mi-proyecto.svg",
+  image: "/projects/mi-proyecto.jpg",
+  video: "/projects/mi-proyecto.mp4", // opcional: portada en video
   imageAlt: "Descripción de la captura",
   href: "https://url-del-proyecto.com",
+  external: true, // opcional: abre el enlace en otra pestaña
+  kind: "real", // opcional: "real" para proyectos de clientes
   featured: true, // opcional: lo muestra como proyecto principal
+  details: { overview: "...", system: "...", features: ["..."] },
 }
 ```
 
 Para agregar uno nuevo:
 
-1. Colocar la captura en `public/projects/`.
-2. Agregar el objeto al array `projects` en `src/data/site.ts`.
-3. Actualizar `href` con la URL externa real.
+1. Colocar la portada (y el video, si hay) en `public/projects/`.
+2. Agregar el objeto en los tres archivos de `src/i18n/`.
+3. Actualizar `href` con la URL real del proyecto.
 
-> **Importante:** los tres proyectos actuales (`Northline`, `Mesa`, `Atlas`) son **conceptos de demostración**. Sus imágenes son mockups SVG creados para el sitio y sus enlaces apuntan a `https://example.com`. Reemplazarlos por casos reales antes de publicar. La interfaz los identifica explícitamente como `Placeholder`.
+> **Importante:** `Wiesing` es un proyecto real para la Gemeinde Wiesing (Tirol, Austria) y enlaza a su demo publicada. `Northline`, `Mesa` y `Atlas` son **conceptos de demostración**: sus imágenes son mockups SVG creados para el sitio y sus enlaces apuntan a demos internas. La interfaz distingue ambos casos con la etiqueta `Proyecto de cliente` / `Demo interactiva`.
 
 ### 3. Perfiles del estudio
 
@@ -178,7 +183,7 @@ El proyecto genera un sitio estático en `dist/`. Compatible con Vercel, Netlify
 npm run build
 ```
 
-Configurar el dominio final y reemplazar todos los placeholders de contacto y proyectos.
+Configurar el dominio final y revisar los datos de contacto antes de publicar.
 
 ---
 

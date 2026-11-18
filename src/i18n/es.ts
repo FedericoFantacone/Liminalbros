@@ -95,13 +95,45 @@ export const es: Translations = {
     titleHighlight: "por nosotros.",
     subtitle: "Explorá algunos de nuestros desarrollos y soluciones digitales.",
     disclaimer:
-      "Cada proyecto abre una demo interactiva desarrollada por LIMINAL CODE: un concepto funcional de una sola vista.",
-    count: "03 / Demo",
+      "Un proyecto real para la Gemeinde Wiesing y tres conceptos interactivos desarrollados por LIMINAL CODE.",
+    count: "04 / Proyectos",
     demo: "Demo interactiva",
+    real: "Proyecto de cliente",
     view: "Ver proyecto",
+    nextLabel: "Próximo caso de estudio",
     nextTitle: "Tu proyecto podría ser el próximo.",
     nextCta: "Empezar un proyecto",
     items: [
+      {
+        id: "wiesing",
+        slug: "wiesing",
+        name: "Wiesing",
+        description:
+          "Rediseño del sitio web de la Gemeinde Wiesing (Tirol, Austria): 61 páginas estáticas, búsqueda propia, accesibilidad integrada y tres idiomas.",
+        category: "Sitio institucional",
+        year: "2026",
+        technologies: ["HTML5", "CSS3", "JavaScript", "Sin dependencias"],
+        image: "/projects/wiesing-cover.jpg",
+        video: "/projects/wiesing-cover.mp4",
+        imageAlt:
+          "Portada del sitio web de la Gemeinde Wiesing con el paisaje del Tirol",
+        href: "https://wiesing-tirol.netlify.app/",
+        external: true,
+        kind: "real",
+        featured: true,
+        details: {
+          overview:
+            "Rediseño completo del sitio municipal de Wiesing, una comunidad de Tirol, Austria. La web reúne servicios, noticias y trámites en una experiencia clara, con navegación en alemán, inglés y español.",
+          system:
+            "Sitio estático sin framework ni dependencias en tiempo de ejecución. HTML semántico, CSS propio y JavaScript para la búsqueda, los diálogos y las preferencias de accesibilidad, con imágenes WebP/AVIF y fuentes WOFF2 alojadas localmente.",
+          features: [
+            "61 páginas estáticas con HTML semántico",
+            "Búsqueda client-side con normalización de umlauts",
+            "Panel de accesibilidad: contraste y tamaño de texto",
+            "Tres idiomas (DE/EN/ES) con hreflang",
+          ],
+        },
+      },
       {
         id: "northline",
         slug: "northline",
@@ -114,7 +146,6 @@ export const es: Translations = {
         image: "/projects/northline.svg",
         imageAlt: "Vista previa conceptual de Northline, dashboard de analítica",
         href: "/demo/northline",
-        featured: true,
         details: {
           overview:
             "Northline organiza métricas, eventos y fuentes de datos en una interfaz clara para equipos que toman decisiones todos los días.",
